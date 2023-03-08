@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+
+    <style>
+        /* reset */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            /* 이미지 적용시 여백이 남았을때 사용 해야함. */
+            vertical-align: top;
+        }
+        .mt10 { margin-top: 10px !important;}
+        .mt20 { margin-top: 20px !important;}
+        .mt30 { margin-top: 30px !important;}
+        .mt40 { margin-top: 40px !important;}
+        .mt50 { margin-top: 50px !important;}
+        .mt60 { margin-top: 60px !important;}
+        .mt70 { margin-top: 70px !important;}
+
+        .mb10 { margin-bottom: 10px !important;}
+        .mb20 { margin-bottom: 20px !important;}
+        .mb30 { margin-bottom: 30px !important;}
+        .mb40 { margin-bottom: 40px !important;}
+        .mb50 { margin-bottom: 50px !important;}
+        .mb60 { margin-bottom: 60px !important;}
+        .mb70 { margin-bottom: 70px !important;}
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.3); */
+        }
+        .section.center{
+            text-align: center;
+        }
+        .nexon {
+            font-family: "NexonLv1Gothic";
+            /* h2태그의 기본 성질은 700[bold]로 되어있음. */
+            font-weight: 400;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .notice__small {
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: rgba(208, 211, 55, 0.8);
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        /* text__wrap */
+        .text__wrap { }
+        /* wrap보다 inner가 우선순위가 높아서 text-align:left 먹힘 */
+        .text__inner {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-between
+        }
+        .text__inner .text {
+            width: 32.3333%;
+            border: 1px solid #f5f5f5;
+            padding: 90px 20px 20px 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text__inner .text::before {
+            content: "";
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border-radius: 50%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .text__inner .text.t1::before{
+            background-color: rgba(191, 194, 46, 0.3);
+            background-image: url(../asset/img/imgtext01.svg);
+        }
+    
+        .text__inner .text.t2::before{
+            background-color: rgba(255, 51, 52, 0.2);
+            background-image: url(../asset/img/imgtext02.svg);
+        }
+    
+        .text__inner .text.t3::before{
+            background-color: rgba(72, 87, 236, 0.2);
+            background-image: url(../asset/img/imgtext03.svg);
+        }
+    
+        .text__inner .text.t4::before{
+            background-color: rgba(141, 255, 51, 0.2);
+            background-image: url(../asset/img/imgtext04.svg);
+        }
+    
+        .text__inner .text.t5::before{
+            background-color: rgba(51, 255, 206, 0.2);
+            background-image: url(../asset/img/imgtext05.svg);
+        }
+    
+        .text__inner .text.t6::before{
+            background-color: rgba(194, 46, 180, 0.3);
+            background-image: url(../asset/img/imgtext06.svg);
+        }
+        .text__inner .text:hover{
+            background-color: #f5f5f5;
+        }
+        .text__title {
+            font-size: 24px;
+            margin-bottom: 10px
+        }
+        .text__desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text__btn::before {
+            content: "";
+            background-image: url(../asset/img/icon_plus.svg);
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            transition: all 0.3s;
+        }
+        .text__btn:hover::before{
+            background-color: red;
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="text__wrap section center nexon">
+        <div class="container">
+            <span class="notice__small">NOTICE</span>
+            <h2 class="section__h2 mb70">치킨의 종류</h2>
+
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">후라이드 치킨</h3>
+                    <p class="text__desc">바삭하고 고소한 맛이 좋다는 것: 후라이드 치킨은 바삭하고 고소한 맛이 특징입니다. 특히, 바삭한 피부와 부드러운 고기의 조화로 인해 많은 사람들이 즐기는 음식입니다.</p>
+                    <a href="#" class="text__btn">더보기</a>
+                </div>
+
+                <div class="text t2">
+                    <h3 class="text__title">양념 치킨</h3>
+                    <p class="text__desc">맛있다는 것: 양념 치킨은 매운 맛과 달콤한 맛이 조화로워서 많은 사람들에게 인기가 있습니다. 특히, 매운 맛을 좋아하는 사람들에게는 더욱 좋은 선택이 됩니다.</p>
+                    <a href="#" class="text__btn">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">간장 치킨</h3>
+                    <p class="text__desc">고소하고 짭쪼름한 맛이 좋다는 것: 간장치킨은 간장과 고추장을 사용하여 고소하고 짭쪼름한 맛을 내는 음식입니다. 이러한 맛은 많은 사람들에게 인기가 있습니다.</p>
+                    <a href="#" class="text__btn">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">윙봉</h3>
+                    <p class="text__desc">단백질 공급원이라는 것: 윙봉은 치킨 날개와 마찬가지로 단백질을 공급해줍니다. 단백질은 우리 신체에 필요한 영양소 중 하나이며, 건강한 신체를 유지하는 데 중요합니다.</p>
+                    <a href="#" class="text__btn">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">닭다리만</h3>
+                    <p class="text__desc">비타민 B와 미네랄 공급: 닭다리는 비타민 B와 철, 아연, 인 등의 미네랄이 풍부하게 함유되어 있어 건강한 신체를 유지하는 데 도움을 줍니다.</p>
+                    <a href="#" class="text__btn">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">날개만</h3>
+                    <p class="text__desc">단백질 공급원이라는 것: 치킨 날개는 단백질을 공급해줍니다. 단백질은 우리 신체에 필요한 영양소 중 하나이며, 건강한 신체를 유지하는 데 중요합니다.</p>
+                    <a href="#" class="text__btn">더보기</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
