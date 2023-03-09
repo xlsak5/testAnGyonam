@@ -15,14 +15,15 @@
     <link href="https://webfontworld.github.io/PyeongChang/PyeongChang.css" rel="stylesheet">
 </head>
 
-<!-- 이렇게 해야 함. -->
-<p><iframe height="900px" src="https://github.com/testAnGyonam/quiz/quizEffect01.html"></iframe></p>
-
 <body>
     <header id="header">
         <h1>
-            <a href="../assets/javascript/javascript14.html">Quiz</a><span></span> <em></em>
+            <a href="../assets/javascript/javascript14.html">Quiz</a><span>정답 확인하기 유형</span> <em></em>
         </h1>
+        <ul>
+          <li class="active"><a href="quizEffect01.html">1</a></li>
+          <li><a href="quizEffect02.html">2</a></li>
+      </ul>
     </header>
     <!-- testAnGyonam -->
     <!-- //header -->
@@ -34,7 +35,7 @@
                 </div>
                 <div class="quiz__main">
                     <div class="quiz__question">
-                        <em>. </em><span></span>
+                        <em></em>. <span></span>
                     </div>
                     <div class="quiz__view">
                         <div class="dog__wrap">
@@ -84,6 +85,7 @@
       const quizQuestionNum = quizWrap.querySelector(".quiz__question em");
       const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
       const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
+      const dogWrap = quizWrap.querySelector(".dog__wrap");
 
       // 문제 정보
       const infoType = "웹디자인 기능사";
@@ -106,24 +108,9 @@
       quizAnswerConfirm.addEventListener("click", function(){
         quizAnswerResult.style.display = "block";
         quizAnswerConfirm.style.display = "none";
+        dogWrap.classList.add("like");
       });
 
-      // "함수가 실행되었습니다." * 10
-      {
-        function func() {
-          document.write("함수가 실행되었습니다.");
-        };
-        func();
-        func();
-        func();
-        func();
-        func();
-        func();
-        func();
-        func();
-        func();
-        func();
-      }
     </script>
 </body>
 </html>

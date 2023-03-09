@@ -11,6 +11,8 @@ body {
     padding: 10px;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
 }
 #header::before {
     content: "";
@@ -24,10 +26,13 @@ body {
 }
 #header h1 {
     font-size: 28px;
-    padding: 0px 5px 5px 10px;
+    padding: 5px 5px 5px 10px;
     font-family: "DungGeunMo";
     position: relative;
     z-index: 10;
+}
+#header h1 span {
+    font-size: 0.5rem
 }
 #header h1 a {
     color: #fff;
@@ -36,6 +41,27 @@ body {
     font-size: 0.5em;
     /* rem : 노트폴더 기준 */
     /* em :  */
+}
+#header ul {
+    padding: 5px;
+}
+#header ul li {
+    display: inline;
+    position: relative;
+    z-index: 10;
+}
+#header ul li a {
+    color: #fff;
+    font-family: "DungGeunMo";
+    border: 1px dashed #fff;
+    display: inline-block;
+    padding: 5px;
+    transition: all 0.3s;
+}
+#header ul li.active a,
+#header ul li a:hover {
+    background-color: #fff;
+    color: #000;
 }
 /* footer */
 #footer {
@@ -68,6 +94,14 @@ body {
     padding: 100px 0;
 }
 
+
+
+
+
+
+
+
+
 /* quiz__wrap */
 .quiz__wrap {
     display: flex;
@@ -75,7 +109,7 @@ body {
     flex-wrap: wrap;
 }
 .quiz__wrap .quiz {
-    max-width: 500px;
+    width: 500px;
     background-color: #fff;
     border: 8px ridge #cacaca;
 }
@@ -106,6 +140,7 @@ body {
     font-size: 24px;
     /* border-bottom: 6px ridge #cacaca; */
 }
+
 .quiz__answer .confirm {
     background-color: #C5EB93;
     border-bottom: 3px ridge #cacaca;
@@ -129,13 +164,34 @@ body {
     font-size: 22px;
     /* display: none; */
 }
+.quiz__answer .input {
+    background-color: #fff;
+    border: 6px ridge #cacaca;
+    border-style: groove;
+    width: 100%;
+    font-family: 'PyeongChang';
+    padding: 10px 20px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 .quiz__view {
     border-bottom: 6px ridge #cacaca;
     overflow: hidden;
 }
-
-.quiz__main {}
-.quiz__footer {}
+.quiz__footer {
+    border-top: 6px solid #cacaca;
+    padding: 20px;
+    font-family: 'PyeongChang';
+    background-color: #f5f5f5;
+}
+.quiz__footer::before {
+    content: "★Tip";
+    color: #ff3c3c;
+    font-weight: bold;
+}
+.quiz__desc {
+    padding-top: 5px;
+}
 
 /* dog__wrap */
 .dog .tail, 
@@ -149,7 +205,9 @@ body {
 .dog__wrap {
     transition: 0.2s ease-in;
 }
-
+.dog__wrap {
+    background-color: rgb(139, 24, 24);
+}
 .card-container {
     position: relative;
     width: 360px;
@@ -423,7 +481,7 @@ body {
 
 
 .like {
-    background: #F0754A;
+    background: #35a831;
 }
 .like .face::before {
      margin-top: 10px;
@@ -461,14 +519,20 @@ body {
 .like .chin {
   top: 34%;
 }
-/* .like .tail {
+.tail {
     animation: movetail 0.1s linear infinite alternate forwards;
-} */
+}
+.like .tail {
+    animation: movetail 0.1s linear infinite alternate forwards;
+}
+.dislike .tail {
+    animation: movetail 0.1s linear infinite alternate forwards;
+}
 
 
 /* .btn-dislike:active ~ .wrapper는 dislike로 */
 .dislike {
-  background: #dcdcff;
+  background: #7575b9;
 }
 .dislike .ears::before {
   transform: rotate(-50deg) translate(-7px, 2px);
