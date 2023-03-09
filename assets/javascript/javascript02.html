@@ -189,15 +189,14 @@
 
              <!-- #sample400 -->
              <div id="sample400" class="sample">
-                <h3>04번 복습 : 배열 : 데이터 불러오기 : 2차원 배열</h3>
-                <p>1차원 배열 안에 저장되어있는 데이터를 불르고. 1차원 배열 안에 저장된 2차원 배열을 호출 중입니다.</p>
+                <h3>(복습)typeof로 타입의 유형을 알아내는 것을 추가로 배웠습니다.</h3>
+                <p>주어진 값의 데이터 타입을 반환합니다</p>
 <pre><code class="language-js">{
-    // 변수, 상수, 배열, 객체
-    // 변수
     let x = 100, y = "200", z = undefined;
     function func() {}
 
     document.write(x + "<br>"); 
+    
     //typeof() : 타입 값을 출력해줌.(숫자 = number / 문자열 = String)
     document.write(typeof(x) + "<br>"); 
     document.write(y + "<br>");
@@ -228,8 +227,17 @@
                     </details>
                 </div>
                 <div class="notice">
-                    <h4>1차원 배열 안에 2차원 배열을 저장합니다.</h4>
-                    <p>상수로 arr이름을 가진 배열을 생성하고. arr의 인덱스 번호로 데이터를 호출 중입니다.</p>
+                    <h4>typeof로 데이터 타입을 가져옵니다.</h4>
+                    <p>
+                        1."undefined": 값이 정의되지 않은 경우
+                        2."boolean": 값이 논리값인 경우
+                        3."number": 값이 숫자인 경우
+                        4."bigint": 값이 큰 정수인 경우
+                        5."string": 값이 문자열인 경우
+                        6."symbol": 값이 심볼인 경우 (ECMAScript 6에서 추가됨)
+                        7."function": 값이 함수인 경우 (하지만 "function"은 함수가 객체임을 나타냅니다)
+                        8."object": 값이 null인 경우 또는 객체, 배열, 함수 등의 경우
+                    </p>
                 </div>
             </div>
             <!-- //#sample400 -->
