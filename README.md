@@ -10,7 +10,7 @@
 퀴즈 게임01 : https://xlsak5.github.io/testAnGyonam/assets/javascript/quiz/quizEffect01.html
 퀴즈 게임02 : https://xlsak5.github.io/testAnGyonam/assets/javascript/quiz/quizEffect02.html
 
-#사이트
+# 사이트
 이미지 유형01 : https://xlsak5.github.io/testAnGyonam/site/imageType/imageType01.html
 카드 유형01 : https://xlsak5.github.io/testAnGyonam/site/cardType/cardType02.html
 텍스트 유형01 : https://xlsak5.github.io/testAnGyonam/site/textType/textType01.html
