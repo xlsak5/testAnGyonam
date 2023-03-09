@@ -15,6 +15,9 @@
     <link href="https://webfontworld.github.io/PyeongChang/PyeongChang.css" rel="stylesheet">
 </head>
 
+<!-- 이렇게 해야 함. -->
+<p><iframe height="900px" src="https://github.com/testAnGyonam/quiz/quizEffect01.html"></iframe></p>
+
 <body>
     <header id="header">
         <h1>
@@ -104,6 +107,23 @@
         quizAnswerResult.style.display = "block";
         quizAnswerConfirm.style.display = "none";
       });
+
+      // "함수가 실행되었습니다." * 10
+      {
+        function func() {
+          document.write("함수가 실행되었습니다.");
+        };
+        func();
+        func();
+        func();
+        func();
+        func();
+        func();
+        func();
+        func();
+        func();
+        func();
+      }
     </script>
 </body>
 </html>
