@@ -96,7 +96,7 @@ body {
     font-family: 'PyeongChang';
     border-bottom: 6px ridge #cacaca;
 }
-.quiz__question span {
+.quiz__question em {
     /* color: #ff3c3c; */
 }
 .quiz__answer {
@@ -127,7 +127,7 @@ body {
     font-family: 'PyeongChang';
     padding: 10px 20px;
     font-size: 22px;
-    display: none;
+    /* display: none; */
 }
 .quiz__view {
     border-bottom: 6px ridge #cacaca;
