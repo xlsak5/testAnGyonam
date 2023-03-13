@@ -23,6 +23,7 @@
         <ul>
           <li class="active"><a href="quizEffect01.html">1</a></li>
           <li><a href="quizEffect02.html">2</a></li>
+          <li><a href="quizEffect03.html">3</a></li>
       </ul>
     </header>
     <!-- testAnGyonam -->
@@ -66,7 +67,9 @@
                         <div class="result">연변대비</div>
                     </div>
                 </div>
-                <div class="quiz__footer"></div>
+                <div class="quiz__footer">
+                  <div class="quiz__desc">설명</div>
+                </div>
             </div>
         </div>
     </main>
@@ -86,6 +89,7 @@
       const quizAnswerConfirm = quizWrap.querySelector(".quiz__answer .confirm");
       const quizAnswerResult = quizWrap.querySelector(".quiz__answer .result");
       const dogWrap = quizWrap.querySelector(".dog__wrap");
+      const quizFooter = quizWrap.querySelector(".quiz__footer");
 
       // 문제 정보
       const infoType = "웹디자인 기능사";
@@ -108,6 +112,7 @@
       quizAnswerConfirm.addEventListener("click", function(){
         quizAnswerResult.style.display = "block";
         quizAnswerConfirm.style.display = "none";
+        quizFooter.style.display = "block";
         dogWrap.classList.add("like");
       });
 

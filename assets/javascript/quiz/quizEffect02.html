@@ -23,6 +23,7 @@
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li class="active"><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
         </ul>
     </header>
     <!-- testAnGyonam -->
@@ -66,10 +67,9 @@
                         <button class="confirm">정답 확인하기</button>
                         <div class="result">연변대비</div>
                     </div>
-                </div>
-                <div class="quiz__footer">
                     <div class="quiz__desc">설명</div>
                 </div>
+
             </div>
         </div>
     </main>
@@ -91,7 +91,6 @@
       const quizAnswerInput = quizWrap.querySelector(".quiz__answer .input");
       const dogWrap = quizWrap.querySelector(".dog__wrap");
       const quizDesc = quizWrap.querySelector(".quiz__desc");
-      const quizFooter = quizWrap.querySelector(".quiz__footer");
 
       // 문제 정보
       const infoType = "정보처리 기능사";
@@ -114,7 +113,7 @@
       // 정답 & 해설 숨기기
       quizAnswerResult.style.display = "none";
       quizDesc.style.display = "none";
-      quizFooter.style.display = "none";
+      // quizFooter.style.display = "none";
 
       // 사용자 정답
       // value를 사용하면 값을 가져옴
@@ -126,9 +125,9 @@
         quizAnswerInput.style.display = "none";
         quizAnswerConfirm.style.display = "none";
         quizAnswerResult.style.display = "block";
-        quizFooter.style.display = "block";
+        // quizFooter.style.display = "block";
         
-        if(infoAnswer === userAnswer){
+        if(userAnswer === infoAnswer){
             // 정답 버튼 제거
             dogWrap.classList.add("like");
             quizDesc.style.display = "block";
@@ -136,7 +135,7 @@
             // alert("정답입니다.");
         }
         else{
-            dogWrap.classList.add("dislike");            
+          dogWrap.classList.add("dislike");
             
             // alert("오답입니다.");
         }

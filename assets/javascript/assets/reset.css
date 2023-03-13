@@ -187,6 +187,7 @@ a {
     margin: 10px 0;
     padding: 10px;
     margin-bottom: 50px;
+    text-align: center;
 }
 .main__desc a:hover {
     border-color: #4f71d1;
