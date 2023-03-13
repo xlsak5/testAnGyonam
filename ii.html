@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI설계 1</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #c08f8f;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "section1 section2 section3"
+                "section1 section4 section4"
+                "section1 section5 section5"
+                "footer footer footer";
+            grid-template-columns: 300px 450px 450px;
+            grid-template-rows: 100px 100px 300px 300px 300px 100px;
+        }
+        #header {
+            background-color: #e6ff05;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #c4d813;
+            grid-area: nav;
+        }
+        #section1 {
+            background-color: #acbb29;
+            grid-area: section1;
+        }
+        #section2 {
+            background-color: #676e22;
+            grid-area: section2;
+        }
+        #section3 {
+            background-color: #454923;
+            grid-area: section3;
+        }
+        #section4 {
+            background-color: #ddf509;
+            grid-area: section4;
+        }
+        #section5 {
+            background-color: #515e03;
+            grid-area: section5;
+        }
+        #footer {
+            background-color: #dfeb7b;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="section1"></section>
+        <section id="section2"></section>
+        <section id="section3"></section>
+        <section id="section4"></section>
+        <section id="section5"></section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
