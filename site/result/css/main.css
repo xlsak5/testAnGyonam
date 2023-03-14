@@ -1,0 +1,501 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+img {
+    /* 이미지 적용시 여백이 남았을때 사용 해야함. */
+    vertical-align: top;
+}
+/* 시각장애인(웹표준) */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden
+}
+.mt10 { margin-top: 10px !important;}
+.mt20 { margin-top: 20px !important;}
+.mt30 { margin-top: 30px !important;}
+.mt40 { margin-top: 40px !important;}
+.mt50 { margin-top: 50px !important;}
+.mt60 { margin-top: 60px !important;}
+.mt70 { margin-top: 70px !important;}
+
+.mb10 { margin-bottom: 10px !important;}
+.mb20 { margin-bottom: 20px !important;}
+.mb30 { margin-bottom: 30px !important;}
+.mb40 { margin-bottom: 40px !important;}
+.mb50 { margin-bottom: 50px !important;}
+.mb60 { margin-bottom: 60px !important;}
+.mb70 { margin-bottom: 70px !important;}
+
+/* common */
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* background-color: rgba(0,0,0,0.3); */
+}
+/* 
+.section.center{
+    text-align: center;
+} 
+*/
+.nexon {
+    font-family: "NexonLv1Gothic";
+    /* h2태그의 기본 성질은 700[bold]로 되어있음. */
+    font-weight: 400;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+.notice__small {
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: rgba(208, 211, 55, 0.8);
+    color: #fff;
+    padding: 1px 23px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+/* common */
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* background-color: rgba(0,0,0,0.3); */
+}
+.section {
+    padding: 120px 0;
+}
+.section.center{
+    text-align: center;
+}
+.nexon {
+    font-family: "NexonLv1Gothic";
+    /* h2태그의 기본 성질은 700[bold]로 되어있음. */
+    font-weight: 400;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+ /* style */
+ 
+.section__h2 { 
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 30px; 
+    line-height: 1;
+}
+.section .section__desc{
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 70px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.header__wrap {}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    /* background-color: #ccc; */
+    border-bottom: 1px solid #ccc;
+}
+.header__log {
+    width: 20%;
+    text-align: center;
+}
+.header__menu {
+    width: 60%;
+    text-align: center;
+}
+.header__menu ul {}
+.header__menu ul li {
+    display: inline-block;
+}
+.header__menu ul li a {
+    display: inline-block;
+    padding: 10px 30px;
+    /* background-color: #ddd; */
+}
+.header__member {
+    width: 20%;
+}
+.header__member a {
+    border: 1px solid #000;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+}
+
+/* image__wrap */
+.image__wrap {
+    /* background-color: rgba(0,0,0,0.1); */
+}
+.image__inner {
+    display: flex;
+    /* 
+        flex-start (기본값)	시작쪽으로 정렬(왼쪽 -> 오른쪽)
+        flex-end	끝쪽으로 정렬(우측으로 이동 후, 왼쪽->오른쪽 정렬)
+        center	중앙으로 정렬(가운데로 이동 후, 왼쪽->오른쪽 정렬)
+        space-between	양쪽 정렬
+        space-around	요소 좌우 동일 간격
+    */
+    justify-content: space-between;
+}
+/* image__type */
+.image__inner .image {
+    width: 570px;
+    height: 370px;
+    /* background-color: #ccc; */
+    position: relative;
+}
+.image__header {
+}
+.image__body {
+    position: absolute;
+    left: 0;
+    bottom:0;
+    color: #fff;
+    text-align: left;
+    padding: 30px;
+}
+.image__body .title {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+.image__body .desc {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding-right: 20%;
+}
+.image__body .btn {
+    display: inline-block;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5); 
+    padding: 10px 30px;
+}
+
+/* slider__wrap */
+/* 이미지 최적화 - https://imagecompressor.com/ko/ - 파일 업로드 후 다운로드(80%까지 최적화 해줌)*/
+.slider__wrap {
+    padding: 0;
+}
+.slider__inner {}
+.slider__inner .slider {
+    height: 600px;
+    background-image: url(/assets/img/unsplash_Yn0l7uwBrpw.jpg);
+    /* cover : width값을 기준으로 꽉채움 */
+    /* 피그마 Export에서 1x는 일반 피시
+    래트나(핸드폰) 2x */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+.slider__inner .slider::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.slider__info {
+    padding: 100px 0;
+}
+.slider__info .small {
+    display: inline-block;
+    padding: 1px 30px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.slider__info .title {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-left: -2px;
+}
+.slider__info .desc {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    width: 50%;
+    word-break: keep-all;
+}
+.slider__info .btn {
+    margin-top: 100px;
+}
+.slider__info .btn a {
+    display: inline-block;
+    width: 180px;
+    background-color: #fff;
+    text-align: center;
+        /* 정확히 height값 줄거면 height값 주고 line-height 주면 똑같아짐.  */
+    padding: 12px;
+    margin-right: 4px;
+}
+.slider__info .btn a:last-child {
+    background-color: #000;
+    color: #fff;
+}
+.slider__arrow {
+
+}
+.slider__arrow a {
+    position: absolute;
+    top: 50%;
+    background-image: url(/assets/img/Frame\ 1.png);
+    background-size: 500px;
+    width: 30px;
+    height: 56px;
+    display: block;
+    margin-top: -28px;
+}
+.slider__arrow a:first-child {
+    left: 20px;
+}
+.slider__arrow a:last-child {
+    right: 20px; 
+    background-position: -46px 0;
+}
+.slider__dot {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+.slider__dot a {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url(/assets/img/Frame\ 1.png);
+    /* background-size: 500px; */
+    background-size: 239px;
+}
+.slider__dot a.dot {
+    background-position: -79px -1px;
+}
+.slider__dot a.active {
+    background-position: -39px -1px;
+}
+.slider__dot a.play {
+    background-position: -20px -1px;
+}
+.slider__dot a.stop {
+    background-position: -335px -1px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 2dppx) {
+        .slider__inner .slider {
+            background-image: url(../asset/img/SLIDER-TYPE04@2x-min.jpg);      
+        }
+}
+
+    /* style */
+.section__h2 { 
+    font-size: 50px;
+    font-weight: 400;
+    margin-bottom: 30px; 
+    line-height: 1;
+}
+.section .section__desc{
+    font-size: 22px;
+    color: #666;
+    margin-bottom: 70px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+/* card__type */
+.card__wrap {}
+.card__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.card__inner .card {
+    width: 32.3333%;
+    background-color: #f8f8f8;
+}
+.card__header {}
+.card__body {
+    padding: 24px;
+}
+.card__body .title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.card__body .desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+.card__body .btn {
+    padding-right: 40px;
+    /* svg 불러내는 방법 */
+    /* 구글로 svg 파일을 옮긴다. --> 개발자 도구 -->  소스 -> svg파일 내용 복사 -> https://yoksel.github.io/url-encoder/ 에 넣어서 바꾼다음 -> Ready for CSS 붙여넣기*/
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='8' viewBox='0 0 40 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM39.3536 4.35355C39.5488 4.15829 39.5488 3.84171 39.3536 3.64645L36.1716 0.464466C35.9763 0.269204 35.6597 0.269204 35.4645 0.464466C35.2692 0.659728 35.2692 0.976311 35.4645 1.17157L38.2929 4L35.4645 6.82843C35.2692 7.02369 35.2692 7.34027 35.4645 7.53553C35.6597 7.7308 35.9763 7.7308 36.1716 7.53553L39.3536 4.35355ZM1 4.5H39V3.5H1V4.5Z' fill='black'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+/* text__wrap */
+.text__wrap { }
+/* wrap보다 inner가 우선순위가 높아서 text-align:left 먹힘 */
+.text__inner {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between
+}
+.text__inner .text {
+    width: 32.3333%;
+    border: 1px solid #f5f5f5;
+    padding: 90px 20px 20px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+.text__inner .text::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.text__inner .text.t1::before{
+    background-color: rgba(191, 194, 46, 0.3);
+    background-image: url(/assets/img/imgtext01.svg);
+}
+
+.text__inner .text.t2::before{
+    background-color: rgba(255, 51, 52, 0.2);
+    background-image: url(/assets/img/imgtext02.svg);
+}
+
+.text__inner .text.t3::before{
+    background-color: rgba(72, 87, 236, 0.2);
+    background-image: url(/assets/img/imgtext03.svg);
+}
+
+.text__inner .text.t4::before{
+    background-color: rgba(141, 255, 51, 0.2);
+    background-image: url(/assets/img/imgtext04.svg);
+}
+
+.text__inner .text.t5::before{
+    background-color: rgba(51, 255, 206, 0.2);
+    background-image: url(/assets/img/imgtext05.svg);
+}
+
+.text__inner .text.t6::before{
+    background-color: rgba(194, 46, 180, 0.3);
+    background-image: url(/assets/img/imgtext06.svg);
+}
+.text__inner .text:hover{
+    background-color: #f5f5f5;
+}
+.text__title {
+    font-size: 24px;
+    margin-bottom: 10px
+}
+.text__desc {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+.text__btn {
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+.text__btn::before {
+    content: "";
+    background-image: url(../asset/img/icon_plus.svg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    transition: all 0.3s;
+}
+.text__btn:hover::before{
+    background-color: red;
+    transform: rotate(360deg);
+}
+
+.text2__wrap {
+    padding: 120px 0; 
+}
+.text2__wrap span {
+    display: block;
+    width: 100px;
+    height: 22px;
+    border-radius: 50px;
+    background-color: #D0D337;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #fff;
+}
+.bread__wrap {
+    display: flex;
+    box-sizing: border-box;
+}
+.bread__wrap .bread__explain {
+    width: 32.3333%;
+    margin-right: 1%;
+    /* background-color: #ccc; */
+}
+.bread__wrap .bread__explain h2 {
+    text-align: left;
+    font-size: 50px;
+}
+.bread__wrap .bread__explain p {
+    color: #666;
+    text-align: left;
+    line-height: 1.6;
+}
+.bread__wrap .bread__explain p.bread__turf {
+    margin-top: 25px;
+    margin-bottom: 16px;
+}
+.bread__wrap .bread__img1 {
+    width: 32.3333%;
+    margin-right: 1%;
+}
+.bread__wrap .bread__img2 {
+    width: 32.3333%;
+}
