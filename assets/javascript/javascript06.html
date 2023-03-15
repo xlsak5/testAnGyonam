@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript : 배열 객체</title>
 
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="../css/default.min.css">
+
     <link rel="shortcut icon" href="../ico/javascript.ico">
     <link rel="icon" type="image/png" sizes="192x192"  href="../ico/javascript192x192.png">
 </head>
@@ -45,8 +48,84 @@
     <main id="main">  
         <div class="container">
             <div class="main__menu"> 
+                <ul>
+                    <li><a href="#">배열 메서드 : join() : 배열 요소 문자열 결합</a></li>
+                    <li><a href="#">배열 메서드 : push() : 배열 마지막 요소에 요소를 추가</a></li>
+                    <li><a href="#">배열 메서드 : pop() : 배열 마지막 요소를 삭제</a></li>
+                    <li><a href="#">배열 메서드 : unshift() : 배열 처음 요소에 요소를 추가</a></li>
+                    <li><a href="#">배열 메서드 : shift() : 배열 처음 요소를 삭제</a></li>
+                    <li><a href="#">배열 메서드 : reverse()</a>★★</li>
+                    <li><a href="#">배열 메서드 : sort()</a>★★</li>
+                    <li><a href="#">배열 메서드 : concat()</a>★</li>
+                    <li><a href="#">배열 메서드 : reduce()</a></li>
+                    <li><a href="#">배열 메서드 : slice()</a></li>
+                    <li><a href="#">배열 메서드 : splice()</a></li>
+                    <li><a href="#">배열 메서드 : indexOf()</a></li>
+                    <li><a href="#">배열 메서드 : lastIndexOf()</a></li>
+                    <li><a href="#">배열 메서드 : includes()</a></li>
+                    <li><a href="#">배열 메서드 : find()</a></li>
+                    <li><a href="#">배열 메서드 : findIndex()</a></li>
+                    <li><a href="#">배열 메서드 : filter()</a></li>
+                    <li><a href="#">배열 메서드 : map()</a></li>
+                </ul>
             </div>
-        </div>       
+        </div>    
+        <!-- //main__menu -->
+        <div class="main__sample">
+            <div id="sample1" class="sample">
+                <div id="sample1" class="sample">
+                    <h3>배열 메서드 : join() : 배열 요소 문자열 결합</h3>
+                    <p>join() 메ㅓ드는 배열 요소를 무문자열로 결합합니다. 반환은 문자열입니다.</p>
+                <pre><code class="language-js">{
+                const arrNum1 = [100, 200, 300, 400, 500];
+                const text1 = arrNum1.join("");
+                const text2 = arrNum1.join(" ");
+                const text3 = arrNum1.join("*");
+                const text4 = arrNum1.join("-");
+                const text5 = arrNum1.join("★");
+                
+                console.log(arrNum1); // (5) [100, 200, 300, 400, 500]
+                console.log(text1); // 100200300400500
+                console.log(text2); // 100 200 300 400 500
+                console.log(text3); // 100*200*300*400*500
+                console.log(text4); // 100-200-300-400-500
+                console.log(text5); // 100★200★300★400★500
+                }
+                </code></pre>
+                </div>
+                </div>   
+
+                <h3>배열 메서드 : push() / pop() : 반환(숫자)</h3>
+                <p>push() 메서드는 배열 마지막에 요소에 요소를 추가하고, pop() 메서드는 배열 마지막 요소를 삭제합니다.</p>
+<pre><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
+    const arrPush1 = arrNum1.push(600);
+
+    console.log(arrNum1); // (6) [100, 200, 300, 400, 500, 600]
+
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const arrPush2 = arrNum2.pop();
+
+    console.log(arrNum2); // (4) [100, 200, 300, 400]
+}
+</code></pre>
+            </div>
+            <div id="sample3" class="sample">
+                <h3>배열 메서드 : unshift() / shift()</h3>
+                <p>unshift() 메서드는 배열 처음 요소에 요소를 추가하고, shift() 메서드는 배열 처음 요소를 삭제합니다.</p>
+<pre><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
+    const arrPush1 = arrNum1.unshift(600);
+
+    console.log(arrNum1); // (6) [600, 100, 200, 300, 400, 500]
+
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const arrPush2 = arrNum2.shift(); 
+
+    console.log(arrNum2); // (4) [200, 300, 400, 500]
+}
+</code></pre>
+            </div>
     </main>
     <!-- //main -->
 
@@ -54,5 +133,27 @@
         <a href="mailto:skadldldl123@gmail.com">mailto:skadldldl123@gmail.com</a>
     </footer>
     <!-- //footer -->
+
+    <script src="../js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        
+        // join()
+        {
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const text1 = arrNum1.join("");
+            const text2 = arrNum1.join(" ");
+            const text3 = arrNum1.join("*");
+            const text4 = arrNum1.join("-");
+            const text5 = arrNum1.join("★");
+
+            console.log(arrNum1); // (5) [100, 200, 300, 400, 500]
+            console.log(text1); // 100200300400500
+            console.log(text2); // 100 200 300 400 500
+            console.log(text3); // 100*200*300*400*500
+            console.log(text4); // 100-200-300-400-500
+            console.log(text5); // 100★200★300★400★500
+        }
+    </script>
 </body>
 </html>

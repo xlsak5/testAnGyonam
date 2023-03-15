@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트02</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/quiz.css"/>
+
+    <!-- 폰트(둥근모) -->
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/PyeongChang/PyeongChang.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1>
+            <a href="../assets/javascript/javascript14.html">Quiz</a><span>객관식 확인하기(여러문제) 유형</span> <em></em>
+        </h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li class="active"><a href="quizEffect05.html">5</a></li>
+        </ul>
+    </header>
+    <!-- testAnGyonam -->
+    <!-- //header -->
+    <main id="main">
+         <div class="quiz__wrap">
+            <!-- <div class="quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title"></h2>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                    </div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                            <div class="true">정답입니다.</div>
+                            <div class="false">틀렸습니다.</div>
+                            <div class="card-container">
+                              <div class="dog">
+                                <div class="head">
+                                  <div class="ears"></div>
+                                  <div class="face"></div>
+                                  <div class="eyes">
+                                    <div class="teardrop"></div>
+                                  </div>
+                                  <div class="nose"></div>
+                                  <div class="mouth">
+                                    <div class="tongue"></div>
+                                  </div>
+                                  <div class="chin"></div>
+                                </div>
+                                <div class="body">
+                                  <div class="tail"></div>
+                                  <div class="legs"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="quiz__choice">
+                        <label for="choice1">
+                            <input type="radio" id="choice1" class="select" name="choice" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" class="select" name="choice" value="2">
+                            <span></span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" class="select" name="choice" value="3">
+                            <span></span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" class="select" name="choice" value="4">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="quiz__answer">
+                        <button class="confirm">정답 확인하기</button>
+                    </div>
+                </div>
+                    <div class="quiz__desc">
+                        설명
+                    </div>
+            </div>  -->   
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="skadldldl123@gmail.com">mailto:skadldldl123@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        // 문제 정보
+        // (면제) 정보처리기능사 10년 7월 11일 4회 [기능사 면제]
+        // (해야해) 웹디자인기능사 필기 기출문제 및 CBT 2011년 02월 13일(1회) 정리(60번까지)
+        const quizInfo = [
+            {
+                infoType: "웹디자인 기능사",
+                infoTime: "2011년 1회",
+                infoNumber: "20110101",
+                // 이미지 나오게 할 떄 : infoQuestion: "건강 이미지의 웹사이트를 구성하려고 한다. 가장 적합한 컬러는?<br><img style='width:300px' src=''>",
+                infoQuestion: "건강 이미지의 웹사이트를 구성하려고 한다. 가장 적합한 컬러는?",
+                infoChoice: {
+                    1: "빨강색",
+                    2: "노랑색",
+                    3: "검정색",
+                    4: "녹색"
+                },
+                infoAnswer: "4",
+                infoDesc : "설명을 적어주세요"
+            },
+            {
+                infoType: "웹디자인 기능사",
+                infoTime: "2011년 1회",
+                infoNumber: "20110102",
+                infoQuestion: "입체파(Cubism)의 대표적인 화가는?",
+                infoChoice: {
+                    1: "피카소",
+                    2: "쿠르베",
+                    3: "찰스 자보",
+                    4: "도미에"
+                },
+                infoAnswer: "1",
+                infoDesc : ""
+            },
+            {
+                infoType: "웹디자인 기능사",
+                infoTime: "2011년 1회",
+                infoNumber: "20110103",
+                infoQuestion: "디자인 원리 중 율동의 요소에 해당하지 않는 것은?",
+                infoChoice: {
+                    1: "반복",
+                    2: "비례",
+                    3: "강조",
+                    4: "변칙"
+                },
+                infoAnswer: "2",
+                infoDesc : "설명을 적어주세요"
+            },
+            {
+                infoType: "웹디자인 기능사",
+                infoTime: "2011년 1회",
+                infoNumber: "20110104",
+                infoQuestion: "디자인의 조건 중 합목적성에 대한 예시로 가장 올바른 것은?",
+                infoChoice: {
+                    1: "화려한 집이 살기에 편리하다.",
+                    2: "주로 장식이 많은 의자가 앉기에 편리하다.",
+                    3: "의자를 디자인할 때는 앉을 사람의 몸의 치수, 체중을 고려해야 한다.",
+                    4: "아름다운 구두가 신기에 편하다."
+                },
+                infoAnswer: "3",
+                infoDesc : "설명을 적어주세요"
+            },
+            {
+                infoType: "웹디자인 기능사",
+                infoTime: "2011년 1회",
+                infoNumber: "20110105",
+                infoQuestion: "관용색명의 특징으로 볼 수 없는 것은?",
+                infoChoice: {
+                    1: "시대나 유행에 따라서 다소 변하기도 하므로 정확한 색의 전 달이 어렵다.",
+                    2: "무수히 많은 색 이름과 그 어원을 가지고 있어서 한꺼번에 습득하기가 어렵다",
+                    3: "어느 특정한 색을 여러 가지 언어로 표현하고 있기 때문에 복잡하고 혼동하기 쉽다.",
+                    4: "몇 가지의 기본적인 색 이름에 수식어, 색상의 형용사를 덧붙여서 부른다."
+                },
+                infoAnswer: "4",
+                infoDesc : "설명을 적어주세요"
+            },
+            {
+                infoType: "웹디자인 기능사",
+                infoTime: "2011년 1회",
+                infoNumber: "20110106",
+                infoQuestion: "색체 지각의 3요소가 아닌 것은?",
+                infoChoice: {
+                    1: "색채",
+                    2: "빛(광원)",
+                    3: "물체",
+                    4: "시각(눈)"
+                },
+                infoAnswer: "1",
+                infoDesc : "설명을 적어주세요"
+            }
+        ];
+        // 선택자  
+        const quizWrap = document.querySelector(".quiz__wrap");
+        let quizScore = 0;
+        
+        
+
+        // 문제 출력
+        const UpdateQuiz = () => {
+            const exam = [];
+
+            quizInfo.forEach((question, number) => {
+                // 탬플럿 리터럴 방식
+                exam.push(
+                `
+                 <div class="quiz">
+                    <div class="quiz__header">
+                        <h2 class="quiz__title">${question.infoType} ${question.infoTime}</h2>
+                    </div>
+                    <div class="quiz__main">
+                        <div class="quiz__question">
+                            <em>${number + 1}</em>. ${question.infoQuestion}
+                        </div>
+                        <div class="quiz__view">
+                            <div class="dog__wrap">
+                                <div class="true">정답입니다!</div>
+                                <div class="false">틀렸습니다..</div>
+                                <div class="card-container">
+                                    <div class="dog">
+                                        <div class="head">
+                                            <div class="ears"></div>
+                                            <div class="face"></div>
+                                            <div class="eyes">
+                                                <div class="teardrop"></div>
+                                            </div>
+                                            <div class="nose"></div>
+                                            <div class="mouth">
+                                                <div class="tongue"></div>
+                                            </div>
+                                            <div class="chin"></div>
+                                        </div>
+                                        <div class="body">
+                                            <div class="tail"></div>
+                                            <div class="legs"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="quiz__choice">
+                            <label for="choice1${number}">
+                                <input type="radio" id="choice1${number}" name="choice${number}" value="1">
+                                <span>${question.infoChoice[1]}</span>
+                            </label>
+                            <label for="choice2${number}">
+                                <input type="radio" id="choice2${number}" name="choice${number}" value="2">
+                                <span>${question.infoChoice[2]}</span>
+                            </label>
+                            <label for="choice3${number}">
+                                <input type="radio" id="choice3${number}" name="choice${number}" value="3">
+                                <span>${question.infoChoice[3]}</span>
+                            </label>
+                            <label for="choice4${number}">
+                                <input type="radio" id="choice4${number}" name="choice${number}" value="4">
+                                <span>${question.infoChoice[4]}</span>
+                            </label>
+                        </div>
+                        <div class="quiz__desc">정답은 <em>${question.infoAnswer}</em> 입니다.<br> ${question.infoDesc}</div>
+                    </div>
+                </div>
+                `
+                );
+
+                
+            });
+            
+            exam.push(
+                `
+                <div class="quiz__info">
+                    ${quizScore}점
+                </div>
+                <div class="quiz__check">
+                    정답 확인
+                </div>
+                `
+            );
+            quizWrap.innerHTML = exam.join("");
+
+            // 설명 숨기기
+            document.querySelectorAll(".quiz__desc").forEach((question) => {
+                question.style.display = "none";        
+            });
+        }
+            
+        UpdateQuiz();
+
+        // 정답 확인
+        // 로딩되기 전
+        const answerQuiz = () => {
+            const quizChoices = document.querySelectorAll(".quiz__choice");
+
+            // 사용자가 체크한 정답 === 문제 정답 맞는지 확인
+            quizInfo.forEach((question, number) => {
+                const userSelector = `input[name=choice${number}]:checked`;
+                const quizSelectorWrap = quizChoices[number];
+                // 왼쪽은 값이 있고 / 오른쪽은 값이 없을때
+                const userAnswer = (quizSelectorWrap.querySelector(userSelector) || {}).value;
+                const dogWrap = quizWrap.querySelectorAll(".dog__wrap");
+
+                if(userAnswer == question.infoAnswer){
+                    // alert("정답");
+                    dogWrap[number].classList.add("like");
+                    dogWrap[number].classList.remove("dislike");
+                    quizScore++;
+                }
+                else{
+                    // alert("오답");
+                    dogWrap[number].classList.add("dislike");                    
+                    dogWrap[number].classList.remove("like");
+                }
+            });
+
+             // 설명 보이기
+            document.querySelectorAll(".quiz__desc").forEach((question) => {
+                question.style.display = "block";        
+            });
+
+            // 점수 보이기
+            document.querySelector(".quiz__info").innerHTML = Math.ceil((quizScore / quizInfo.length) * 100) + "점";
+        };
+
+        // 정답 클릭
+        document.querySelector(".quiz__check").addEventListener("click", answerQuiz);
+        
+    </script>
+</body>
+</html>
