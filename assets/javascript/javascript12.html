@@ -97,9 +97,12 @@
                 <div id="sample3" class="sample">
                     <h3>03. 데이터 이팩트 : 0부터 100까지 짝수만 출력하기</h3>
                     <p>for문을 이용해서 0-100까지의 짝수를 출력하는 예제입니다.</p>
-<pre class="line-numbers"><code class="language-js">{}
+<pre class="line-numbers"><code class="language-js">{
     for(let i=0; i&lt;100; i+=2) { //반복문 for문
-    console.log(i); //값을 0부터 100까지 설정하고. 그 중에서 짝수만 출력 하는 중
+        if(i%2 === 0){
+            console.log(i); //값을 0부터 100까지 설정하고. 그 중에서 짝수만 출력 하는 중
+        }
+    } 
 }
 
 //증감 연산자를 이용

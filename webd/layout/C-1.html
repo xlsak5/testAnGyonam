@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C-1</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #wrap {
+            width: 1000px;
+            display: flex;
+            text-align: center;
+            font-weight: normal;
+            color: #fff;
+        }
+        #left {
+            width:30%;
+            height: 650px;
+            background-color: #ccc;
+        }
+        #left .logo {}
+        #left .menu {
+            border-top: 1px dashed #000;
+        }
+        #right {
+            width: 70%;
+            background-color: #5e2020;
+        }
+        #right #slide {
+            display: block;
+            width: 100%;
+            height: 350px;
+            background-color: #138dd4;
+        }
+        #contents {
+            display: flex;
+        }
+        #contents .cont1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #00f3e7;
+        }
+        #contents .cont2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #276d69;
+        }
+        #contents .cont3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #6be6df;
+        }
+        #footer {
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        #footer .foot1 {
+            width: 20%;
+            height: 100px;
+            background-color: #8b07f7;
+        }
+        #footer .foot2 {
+            width: 80%;
+            height: 50px;
+            background-color: #491d6d;
+        }
+        #footer .foot3 {
+            width: 80%;
+            height: 50px;
+            background-color: #a265d4;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="left">
+            <h1 class="logo">로고</h1>
+            <nav class="menu">메뉴</nav>
+        </div>
+       
+        <div id="right">
+            <articlce id="slide">이미지 슬라이드</articlce>
+            <section id="contents">
+                <div class="cont1">공지사항(C.1)<br>갤러리(C.2)</div>
+                <div class="cont2">배너(C.3)</div>
+                <div class="cont3">바로가기(C.4)</div>
+            </section>
+            <footer id="footer">
+                <div class="foot1">로고</div>
+                <div class="foot2">하단메뉴</div>
+                <div class="foot3">COPYLIGHT</div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
