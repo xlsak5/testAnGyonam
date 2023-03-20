@@ -91,9 +91,9 @@ a {
     margin-bottom: 10px;
 }
 .main__desc p {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     border-left: 5px solid #0243f1;
-    padding-left: 12px 10px 10px 20px;
+    padding: 12px 10px 10px 20px;
     background-color: #f5f5f5;
 }
 .main__menu {
@@ -112,9 +112,11 @@ a {
     margin: 10px 0;
     padding: 10px;
     margin-bottom: 50px;
+    transition: all 0.2s;
 }
 .main__desc a:hover {
     border-color: #4f71d1;
+    background-color: #d1ddff;
 }
 .main__sample {
     padding-top: 40px;
