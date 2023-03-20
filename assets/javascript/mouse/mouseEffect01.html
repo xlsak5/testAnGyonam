@@ -142,6 +142,14 @@
     <script>
         window.addEventListener("mousemove", function(event){
             // 하나하나씩 해보기
+            // clientX : X좌표 값 : 브라우저 기준                    
+            // clientY : Y좌표 값 : 브라우저 기준
+            // offsetX : Y좌표 값 : 요소 기준
+            // offsetY : Y좌표 값 : 요소 기준
+            // pageX : Y좌표 값 : 페이지 기준
+            // pageY : Y좌표 값 : 페이지 기준
+            // screenX : Y좌표 값 : 디바이스 기준
+            // screenY : Y좌표 값 : 디바이스 기준
             document.querySelector(".clientX").innerHTML = event.clientX;
             document.querySelector(".clientY").innerHTML = event.clientY;
             document.querySelector(".offsetX").innerHTML = event.offsetX;

@@ -11,7 +11,7 @@
     * {
         padding: 0;
         margin: 0;
-        list-style: none;
+        /* list-style: none; */
     }
     a {
         text-decoration: none;
@@ -102,11 +102,12 @@
     }
     .bread__wrap {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         box-sizing: border-box;
     }
     .bread__wrap .bread__explain {
-        width: 32.3333%;
-        margin-right: 1%;
+        width: 33.3333%;
         /* background-color: #ccc; */
     }
     .bread__wrap .bread__explain h2 {
@@ -122,12 +123,16 @@
         margin-top: 25px;
         margin-bottom: 16px;
     }
-    .bread__wrap .bread__img1 {
+    .bread__wrap .img {
         width: 32.3333%;
-        margin-right: 1%;
+        margin-right: 1%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
     }
-    .bread__wrap .bread__img2 {
-        width: 32.3333%;
+    .bread__wrap .img.i1 {
+        background-image: url(../asset/img/bread1.jpg);
+    }
+    .bread__wrap .img.i2 {
+        background-image: url(../asset/img/bread2.jpg);
+        
     }
     </style>
 </head>
@@ -137,23 +142,21 @@
         <div class="container">
             <span>NOTICE</span>
             <div class="bread__wrap">
-                <div class="bread__explain">
+                <article class="bread__explain">
                     <h2>맛있는 빵<br> 다양한 종류</h2>
                     <p class="bread__turf">빵은 매우 다양한 종류가 있지만, 여기에 몇 가지 대표적인 빵의 종류를 나열해 보겠습니다.</p>
-                    <p>1.식빵 (White bread): 밀가루, 물, 효모, 설탕 등을 사용하여 만든 기본적인 빵으로, 부드러운 식감과 담백한 맛이 특징입니다.</p>
-                    <p>2.프렌치 빵 (French bread): 프랑스에서 유래한 빵으로, 밀가루, 물, 효모, 소금을 사용하여 만들며, 바삭한 외피와 쫄깃한 내용물이 특징입니다.</p>
-                    <p>3.베이글 (Bagel): 유대인 커뮤니티에서 유래한 빵으로, 매우 밀도가 높은 반죽으로 둥글게 만들어져, 끓는 물에 찐 후 오븐에서 구워져서 외피는 딱딱하고, 속은 쫄깃한 맛이 특징입니다.</p>
-                </div>
-                <div class="bread__img1">
-                    <figure>
-                        <img src="../result/img/bread1.png" alt="빵 집~~">
-                    </figure>
-                </div>
-                <div class="bread__img2">
-                    <figure>
-                        <img src="../result/img/bread2.png" alt="빵 제작~~">
-                    </figure>
-                </div>
+                    <ol>
+                        <li>식빵 (White bread): 밀가루, 물, 효모, 설탕 등을 사용하여 만든 기본적인 빵으로, 부드러운 식감과 담백한 맛이 특징입니다.</li>
+                        <li>프렌치 빵 (French bread): 프랑스에서 유래한 빵으로, 밀가루, 물, 효모, 소금을 사용하여 만들며, 바삭한 외피와 쫄깃한 내용물이 특징입니다.</li>
+                        <li>베이글 (Bagel): 유대인 커뮤니티에서 유래한 빵으로, 매우 밀도가 높은 반죽으로 둥글게 만들어져, 끓는 물에 찐 후 오븐에서 구워져서 외피는 딱딱하고, 속은 쫄깃한 맛이 특징입니다.</li>
+                    </ol>
+                </article>
+                <article class="img i1">
+                    <a href="#">맛있는 빵집</a>
+                </article>
+                <article class="img i2">
+                    <a href="#">맛있는 과자</a>
+                </article>
             </div>
         </div>
     </section>
