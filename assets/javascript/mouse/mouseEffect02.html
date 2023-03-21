@@ -13,7 +13,7 @@
     <style>
         .mouse__wrap {
             /* 마우스 모양 사라지게 함 */
-            /* cursor: none; */
+            cursor: none;
         }
         .mouse__text {
             width: 100%;
@@ -68,6 +68,7 @@
         .mouse__cursor2.active1{
             transform: scale(5) skew(40deg);
             background-color: rgba(156, 29, 160, 0.6);
+            font-size: 2vw;
         }
         .mouse__cursor.active2{
             transform: scale(0);
@@ -134,7 +135,6 @@
         // 커서 좌표값 할당
         // page : 페이지 기준
         window.addEventListener("mousemove", (e) => {
-
             //cursor.style.left = event.pageX + "px";
             //cursor.style.top = event.pageY + "px";
             //cursor2.style.left = event.pageX + "px";
@@ -162,15 +162,19 @@
                     cursor.classList.add("active" + (index+1));
                     cursor2.classList.add("active" + (index+1));
 
-                    if(cursor.contains("active1") === true){
-                        console.log("asd");
-                        document.querySelector("span.active1").innerHTML = "실패는 없습니다."
-                        document.querySelector("span.active1").style.left.transform = "500px";
+                    if(cursor.classList.contains("active1") === true){
+                        document.querySelector(".mouse__text span.active1").innerHTML = "failure은 없습니다.";
+                        document.querySelector(".mouse__text span.active1").style.fontSize = "5vw";
                     }
                 })
                 document.querySelector(".active" + (index+1)).addEventListener("mouseleave", (e) => {
                     cursor.classList.remove("active" + (index+1));
                     cursor2.classList.remove("active" + (index+1));
+
+                    if(cursor.classList.contains("active1") === false){
+                        document.querySelector(".mouse__text span.active1").innerHTML = "failure";
+                        document.querySelector(".mouse__text span.active1").style.fontSize = "2vw";
+                    }
                 })
             })
 
