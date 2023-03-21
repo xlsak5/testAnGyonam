@@ -9,6 +9,50 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
+
+    <style>
+        #header { 
+            position: relative;
+            z-index: 10;
+        }
+        .mouse__wrap {
+            cursor: none;
+        }
+        .mouse__text {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            z-index: 10;
+        }
+        .mouse__text p {
+            font-size: 2.5vw;
+            line-height: 1.6;
+        }
+        .mouse__text p span {
+
+        }
+        .mouse__cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            background-color: rgba(255, 255, 255, 0.5);
+            background-image: url(img/mouseffect01-min.jpg);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            z-index: 1;
+        }
+    </style>
 </head>
 
 <body class="img03 bg03 font03">
@@ -25,12 +69,46 @@
     </header>
      <!-- //header -->
     <main id="main">
-
+        <div class="mouse__wrap">
+            <div class="mouse__cursor"></div>
+            <div class="mouse__text">
+                <p>The most important thing in life is not how it ends, but how it starts.</p>
+                <p>인생에서 가장 중요한 것은 그것이 어떻게 끝나느냐가 아니라, 어떻게 시작하는가이다</p>
+            </div>
+        </div>
     </main>
     <!-- //main -->
     <footer id="footer">
         <a href="mailto:skadldldl123@gmail.com">mailto:skadldldl123@gmail.com</a>
     </footer>
     <!-- //footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // 선택자
+        const cursor = document.querySelector(".mouse__cursor");
+
+        // console.log(cursor.clientWidth);
+        // console.log(cursor.clientHeight);
+        // console.log(cursor.offsetWidth);
+        // console.log(cursor.offsetHeight);
+
+        // bottom: 200
+        // height: 200
+        // left :0
+        console.log(cursor.getBoundingClientRect());
+        console.log(cursor.getBoundingClientRect().y)
+
+        window.addEventListener("mousemove", (e) => {
+            gsap.to(cursor, {
+                duration: 0.5, 
+                // left: e.pageX - cursor.clientWidth/2, 
+                // top: e.pageY - cursor.offsetHeight/2
+                left : e.pageX - cursor.getBoundingClientRect().width/2,
+                top : e.pageY - cursor.getBoundingClientRect().height/2
+            });
+        });
+
+    </script>
 </body>
 </html>
