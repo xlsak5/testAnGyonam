@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer타입</title>
+
+    <!-- 폰트 -->
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "NexonLv1Gothic";
+        }
+        ul li {
+            list-style: none;
+        }
+        #footer__wrap {
+            background-color: #F5F5F5;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 120px 0;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden
+        }
+        .footer__menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .footer__menu div h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        .footer__menu div li a{
+            font-size: 14px;
+            color: #666666;
+            line-height: 185%;
+            text-decoration: none;
+        }
+        .footer__right {
+            text-align: center;
+            border-top: 1px solid #D9D9D9;
+            margin-top: 100px;
+            padding-top: 50px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <footer id="footer__wrap">
+        <div class="container">
+            <h2 class="blind">푸터</h2>
+            <div class="footer__inner">
+                <div class="footer__menu">
+                    <div>
+                        <h3>음식 소개</h3>
+                        <ul>
+                            <li><a href="#">음식 종류</a></li>
+                            <li><a href="#">음식 재료</a></li>
+                            <li><a href="#">음식 만들기</a></li>
+                            <li><a href="#">음식 추가</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>음식 구매</h3>
+                        <ul>
+                            <li><a href="#">온라인 구매</a></li>
+                            <li><a href="#">오프라인 구매</a></li>
+                            <li><a href="#">밀키트 구매</a></li>
+                        </ul>    
+                    </div>
+                    <div>
+                        <h3>음식 재료</h3>
+                        <ul>
+                            <li><a href="#">판매처</a></li>
+                            <li><a href="#">원산지</a></li>
+                            <li><a href="#">유통 기한</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>인사말</h3>
+                    <ul>
+                        <li><a href="#">CEO</a></li>
+                        <li><a href="#">소개글</a></li>
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">추가 소개</a></li>
+                    </ul>
+                    </div>
+                    <div>
+                        <h3>건강식품</h3>
+                        <ul>
+                            <li><a href="#">효능</a></li>
+                            <li><a href="#">면역력</a></li>
+                            <li><a href="#">건강증진</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>고객센터</h3>
+                        <ul>
+                            <li><a href="#">전화 문의</a></li>
+                            <li><a href="#">온라인 문의</a></li>
+                            <li><a href="#">이메일 문의</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <address class="footer__right">
+                    2023 피그마로 만들어본 사이트 Portfollo is Power<br>
+                    All Right Reserved
+                </address>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
