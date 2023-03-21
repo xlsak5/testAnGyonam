@@ -10,28 +10,28 @@ body.img01 {
     background-image: url(../img/Frame\ 1-min.jpg);
 }
 body.img02 {
-    background-image: url(../img/mouseeffet02-min.jpg);
+    background-image: url(../img/mouseffect01-min.jpg);
 }
 body.img03 {
-    background-image: url(../img/mouseeffet03-min.jpg);
+    background-image: url(../img/mouseffect09-min.jpg);
 }
 body.img04 {
-    background-image: url(../img/mouseeffet04-min.jpg);
+    background-image: url(../img/mouseeffet03-min.jpg);
 }
 body.img05 {
-    background-image: url(../img/mouseeffet05-min.jpg);
+    background-image: url(../img/mouseeffet04-min.jpg);
 }
 body.img06 {
-    background-image: url(../img/mouseeffet06-min.jpg);
+    background-image: url(../img/mouseeffet05-min.jpg);
 }
 body.img07 {
-    background-image: url(../img/mouseeffet07-min.jpg);
+    background-image: url(../img/mouseeffet06-min.jpg);
 }
 body.img08 {
-    background-image: url(../img/mouseeffet08-min.jpg);
+    background-image: url(../img/mouseeffet07-min.jpg);
 }
 body.img09 {
-    background-image: url(../img/mouseeffet09-min.jpg);
+    background-image: url(../img/mouseeffet08-min.jpg);
 }
 body.img10 {
     background-image: url(../img/mouseeffet10-min.jpg);
@@ -50,10 +50,10 @@ body.bg01::after {
     background: rgba(187, 207, 111, 0.87);
 }
 body.bg02::after {
-    background: rgba(28, 3, 70, 0.87);
+    background: rgba(168, 128, 128, 0.87);
 }
 body.bg03::after {
-    background: rgba(58, 3, 58, 0.87);
+    background: rgba(97, 105, 138, 0.87);
 }
 body.bg04::after {
     background: rgba(19, 53, 87, 0.87);
