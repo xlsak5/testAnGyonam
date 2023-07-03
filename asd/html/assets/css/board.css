@@ -1,0 +1,162 @@
+/* board__inner 
+   +board__search
+   +board__table
+   +board__pages
+   +board__view
+   +board__view
+   +board__write
+*/
+.board__inner {}
+
+/* board__search */
+.board__search {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 120px;
+}
+.board__search .left {
+  width: 40%;
+}
+.board__search .left em {
+  color: red;
+}
+.board__search .right {
+  width: 60%;
+  text-align: right;
+}
+.board__search .right input {
+  border: 0;
+  background-color: var(--color__white);
+  padding: 9px 30px;
+  border-radius: 5px;
+  height: 40px;
+}
+.board__search .right select {
+  border: 0;
+  padding: 11px;
+  border-radius: 5px;
+  width: 90px;
+  height: 40px;
+  vertical-align: -2px;
+}
+
+/* board__table */
+table {
+  width: 100%;
+}
+.board__table {
+  margin-top: 10px;
+  margin-bottom: 60px;
+  border-top: 2px solid var(--color__black);
+  border-bottom: 2px solid var(--color__black);
+  text-align: center;
+}
+.board__table table td a:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.board__table table {}
+.board__table table th {
+  background-color: var(--bg__gray2);
+  border-bottom: 1px solid var(--color__black);
+  padding: 15px 5px;
+  font-weight: 500;
+}
+.board__table table td {
+  padding: 15px 5px;
+  border-bottom: 1px solid var(--color__black);
+}
+.board__table table tr:hover {
+  background-color: var(--bg__gray2);
+}
+
+/* board__pages */
+.board__pages {
+  margin-bottom: 100px;
+}
+.board__pages ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.board__pages li a {
+  border: 1px solid var(--bg__gray3);
+  padding: 10px;
+  /* border 겹친거 풀어줌 */
+  margin-left: -1px;
+}
+.board__pages li:hover a {
+  background-color: var(--bg__gray2);
+}
+.board__pages li.active a {
+  background-color: var(--color__black);
+  color: var(--color__white);
+} 
+
+.ac {
+     display: inline-block;
+    padding: 0.5em;
+    background-color: #fff;
+    width: 90px;
+    /* color: var(--bg__white); */
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* board__view */
+.board__view {
+  margin-top: 40px;
+  border-top: 2px solid var(--color__black);
+  border-bottom: 2px solid var(--color__black);
+}
+.board__view table td, 
+.board__view table th {
+  padding: 15px;
+  border-bottom: 1px solid var(--color__black);
+}
+.board__view table tr:last-child td {
+  height: 500px;
+  vertical-align: top;
+}
+.board__view table th {
+  background-color: var(--bg__gray2);
+  font-weight: 500;
+}
+.board__btn {
+  margin-top: 20px;
+  text-align: right;
+}
+
+
+/* board__write */
+.board__write {
+  padding: 50px 0 100px;
+}
+.board__write label {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.board__write input {
+  margin-bottom: 50px;
+}
+.board__write textarea {
+  padding: 2em;
+  /* text-area를 못 움직이게 해줌 */
+  resize: none;
+}
+.board__write button {
+  float: right;
+  margin-top: 10px;
+}
+
+/* 숨겨 */
+.accc {
+  display: none;
+}

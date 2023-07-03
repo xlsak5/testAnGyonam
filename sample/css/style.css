@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.container {
+    width: 1260px;
+    margin: 0 auto;
+}
+#header {
+    background-color: #e0afaf;
+}
+#header .header__logo {
+    color: #fff;
+}
+#section {
+    
+}
+#section .section__wrap {
+    padding: 60px 0;
+}
+#section .section__box {
+    display: flex;
+    justify-content: center;
+}
+#section .section__wrap .q__title {
+    width: 800px;
+    height: 60px;
+    border: 3px solid #b48f8f;
+}
+#section .section__wrap .q__title em {
+    font-weight: bold;
+    font-size: 20px;
+}
+#section .section__wrap .q__title span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+#section .section__wrap .q__problem {
+    width: 800px;
+    height: 200px;
+    border: 3px solid #000;
+}
+.q__btn {
+    text-align: center;
+    border: 3px solid #947272;
+    padding: 20px;
+}
+.q__btn span {
+    width: 50%;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px 0;
+    display: none;
+    border: 3px dashed #000;
+}
+.q__btn .btn {
+    padding: 10px;
+    font-weight: bold;
+    background-color: #804747;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+#footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #000;
+}
+#footer .footer__wrap {}
+#footer .footer__wrap address {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배운거 복습하기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/sample/css/style.css">
+
+    <!-- JS -->
+</head>
+
+<body>
+    <header id="header">
+        <div class="header__wrap">
+            <div class="container">
+                <div class="header__logo">
+                    <h1>로고</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <section id="section">
+        <div class="section__wrap">
+            <div class="container">
+                <div class="section__box">
+                    <div class="box__problem">
+                        <div class="box__title">
+                            <div class="q__title">
+                                <em></em>.
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="q__btn">
+                            <span>몰라~</span>
+                            <button class="btn">정답 확인하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //section -->
+    <footer id="footer">
+        <div class="footer__wrap">
+            <div class="container">
+                <address>mail: skadldldl123@gmail.com</address>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+
+    <script>
+        const Section = document.querySelector("#section");
+        const qTitle = Section.querySelector(".q__title em");
+        const qProblem = Section.querySelector(".q__title span");
+        const qBtn = Section.querySelector(".q__btn .btn");
+        const qSpan = Section.querySelector(".q__btn span");
+
+        const content = [
+            {
+                turning : "1",
+                pcontent : "인접하는 두 색의 경계 부분에 색상, 명도, 채도의 대비가 더욱 강하게 일어나는 현상을 무엇이라고 하는가?",
+            }
+        ];
+
+        qTitle.innerHTML = content[0].turning;
+        qProblem.innerHTML = content[0].pcontent;
+
+        qBtn.addEventListener("click", function(){
+            console.log("눌렀대");
+            qSpan.style.display = "block";
+            qBtn.style.display = "none";
+        });
+    </script>
+</body>
+</html>

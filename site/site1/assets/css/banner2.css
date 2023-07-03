@@ -1,0 +1,44 @@
+#bannerType2 {
+    background-color: #E99620;
+    padding: 120px 0;
+}
+.banner__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.banner__img {
+    width: 315px;
+    height: 498px;
+}
+.banner__desc {
+    font-family: "NexonLv1Gothic";
+    text-align: center;
+    margin-left: 10px;
+}
+.banner__desc h3 {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+.banner__desc p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+.banner__desc span {
+    display: block;
+    font-size: 16px;
+    margin-top: 200px;
+}
+
+@media (max-width: 720px) {
+    .banner__desc h3 {
+        margin-top: 35px;
+    }
+    .banner__desc span {
+        margin-top: 50px;
+    }
+    .banner__img {
+        height: 350px;
+    }
+}
+@media (max-width: 600px) {}

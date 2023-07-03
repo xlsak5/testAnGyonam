@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asd</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // 1부터 10까지
+    {
+        for(let i=1; i<=10; i++){
+            document.write(i + " ");
+        }
+        document.write("<br>");
+    }
+    // 1부터 10까지 짝수
+    {
+        for(let i=1; i<=10; i++){
+            if(i%2 === 0){
+                document.write(i + " ");
+            }
+        }
+        document.write("<br>");
+    }
+    // 1부터 10까지 출력 후 홀수 빨강 / 짝수 파랑
+    {
+        for(let j=1; j<=10; j++){
+            if(j%2 === 0){
+                document.write(`<span style='color:blue'>  ${j} </span>`);
+            }
+            else{
+                document.write(`<span style='color:red'>  ${j} </span>`);
+            }
+        }
+        document.write("<br>");
+    }
+    // 100, 200, 300, 400, 500 for문
+    {
+        let arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        for(let i=0; i<arr.length; i++){
+            document.write(arr[i] + " ");
+        }
+        document.write("<br>");
+    }
+    // 100, 200, 300, 400, 500 forEach문
+    {
+        let arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        arr.forEach(function(el){
+            document.write(el + " ");
+        });
+        document.write("<br>");
+    }
+    // for in
+    {
+        let arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        for(let i in arr){
+            document.write(arr[i] + " ");
+        }
+        document.write("<br>");
+    }
+     // for of
+     {
+        let arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+        for(let i of arr){
+            document.write(i + " ");
+        }
+    }
+</script>
+</html>

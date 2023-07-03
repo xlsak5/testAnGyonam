@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME Effect</title>
+
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="./css/bg.css"> -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/game.css">
+    <link rel="stylesheet" href="./css/music.css">
+
+    <!-- font 혀니고딕체-->
+    <!-- font-family: 'EF_Hyunygothic'; -->
+    <link href="https://webfontworld.github.io/earlyfont/EF_Hyunygothic.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Rebecca/Rebecca.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="cursor">
+        <img src="img/game_mouse01.png" alt="">
+    </div>
+    <header id="header">
+        <h1>WEBS GAME WORLD</h1>
+        <div class="os">
+            <p class="you__OS"></p>
+        </div>
+        <div class="time">
+            <p id="al"></p>
+            <!-- 2023년 4월 24일 <em class="hour">09</em>시 <em class="minut">30</em>분 <em class="second">00</em>초 -->
+        </div>
+    </header>
+
+    <main>
+        <div class="icon__box">
+            <div class="icon1">
+                <img src="img/t1.png" alt="뮤직">
+                <span>뮤직 듣기</span>
+            </div>
+            <div class="icon2">
+                <img src="img/t2.png" alt="뮤직">
+                <span>뮤직 듣기</span>
+            </div>
+            <div class="icon3">
+                <img src="img/t3.png" alt="뮤직">
+                <span>뮤직 듣기</span>
+            </div>
+            <div class="icon4">
+                <img src="img/t4.png" alt="뮤직">
+                <span>뮤직 듣기</span>
+            </div>
+        </div>
+
+        <!-- 뮤직 플레이어 -->
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>Webs music</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="img/musicview01.png" alt="음악">
+                        </div>
+                    </div>
+                </div>
+                <div class="music__control">
+                    <div class="title">
+                        <h3>노래 제목</h3>
+                        <p>노래 작가 이름</p>
+                    </div>
+                    <div class="progress">
+                        <div class="bar">
+                            <audio  id="main-audio" src="audio/game_icon01.mp3"></audio>
+                        </div>
+                        <div class="timer">
+                            <span class="current">0:00</span>
+                            <span class="duration">3:55</span>
+                        </div>
+                        <div class="control">
+                            <span>
+                                <i class="repeat" id="control-repeat" title="전체 반복"></i>
+                                <!-- <i class="repeat_one" id="control-repeat" title="한곡 반복"></i>
+                                <i class="shuffle" id="control-repeat" title="랜덤 반복"></i> -->
+                            </span>
+                            <span><i class="prev" id="control-prev" title="이전곡 재생"></i></span>
+                            <span><i class="play" id="control-play" title="재생"></i></span>
+                            <span><i class="next" id="control-next" title="다음곡 재생"></i></span>
+                            <span><i class="list" id="control-list" title="재생 목록"></i></span>
+             
+                            <!-- <span class="repeat_one"><i class="repeat_one">한곡 반복</i></span>
+                            <span class="shuffle"><i class="shuffle">랜덤 반복</i></span>
+                            <span class="stop"><i class=stop>반복</i></span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="music__list">
+                    <h3>뮤직 리스트 <a href="#" class="close"></a></h3>
+                    <ul>
+                        <!-- strong이나 em,span태그 -->
+                        <!-- <li class="active">
+                            <div class="list__box">
+                                <div class="list__img">
+                                    <img src="/assets/javascript/game/img/music_view01.png">
+                                </div>
+                                <div class="list__name">
+                                    <p>1.아티스트</p>
+                                    <span>이름</span>
+                                </div>
+                                <div class="list__time">
+                                    <p>02:43</p>
+                                </div>
+                            </div>
+                        </li> -->
+                </div>
+            </div>
+        </div>
+        <!-- //뮤직 플레이어 -->
+
+    </main>
+    <footer id="footer">
+        <div class="info">
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src= "js/music.js"></script>
+    <script>
+        // $(".icon1").draggable({containment:".ion__box", scroll: false});
+        // $(".icon2").draggable();
+        // $(".icon3").draggable();
+        // $(".icon4").draggable();
+        // $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });
+        $(".icon1").draggable({
+            containment:".icon__box", scroll: false,
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse01.png");
+                // $("header").removeClass().addClass("red");
+                $("header").css("background-color","rgba(233, 65, 65, 0.582)");
+                $("header").css("transition","all 0.3s");
+                $("#footer .info").html("현재 빨강 음악 듣기를 클릭 하셨습니다.");
+            },
+            stop: function() {
+                setTimeout(function() {
+                    printAgent();
+                }, 7000); // 7초 후에 실행
+            }
+        });
+        $(".icon2").draggable({
+            containment:".icon__box", scroll: false,
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse02.png");
+                // $("header").removeClass().addClass("blue");
+                $("header").css("background-color","rgba(54, 57, 231, 0.582)");
+                $("header").css("transition","all 0.3s");
+                $("#footer .info").html("현재 파랑 음악 듣기를 클릭 하셨습니다.");
+            },
+            stop: function() {
+                setTimeout(function() {
+                    printAgent();
+                }, 7000); // 7초 후에 실행
+            }
+        });
+        $(".icon3").draggable({
+            containment:".icon__box", scroll: false,
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse03.png");
+                // $("header").removeClass().addClass("green");
+                $("header").css("background-color","rgba(88, 240, 28, 0.582)");
+                $("header").css("transition","all 0.3s");
+                $("#footer .info").text("현재 초록 음악 듣기를 클릭 하셨습니다.");
+            },
+            stop: function() {
+                setTimeout(function() {
+                    printAgent();
+                }, 7000); // 7초 후에 실행
+            }
+        });
+        $(".icon4").draggable({
+            containment:".icon__box", scroll: false,
+            start: function() {
+                $(".cursor img").attr("src", "img/game_mouse04.png");
+                // $("header").removeClass().addClass("yellow");
+                $("header").css("background-color","rgba(237, 240, 63, 0.582)");
+                $("header").css("transition","all 0.3s");
+                $("#footer .info").text("현재 노랑 음악 듣기를 클릭 하셨습니다.");
+            },
+            stop: function() {
+                setTimeout(function() {
+                    printAgent();
+                }, 7000); // 7초 후에 실행
+            }
+        });
+        window.onload = function(){
+            window.addEventListener("mousemove", e => {
+                gsap.to(".cursor", {
+                    duration: 0,
+                    left: e.pageX -5,
+                    top: e.pageY -10
+                });
+            });
+        }
+        //현재 사용중인  OS와 화면크기
+        const printAgent = () => {
+            let os = navigator.userAgent.toLowerCase();
+            let osWdith = window.screen.width
+            let osHeight = window.screen.height
+            if(os.indexOf("macintosh") > -1){
+                document.querySelector("#footer .info").innerHTML = "현재 맥을 사용중 이며, 화면 크기는 "+osWdith+" X "+osHeight+" 입니다."
+            } else if(os.indexOf("windows") > -1){
+                document.querySelector("#footer .info").innerHTML = "현재 윈도우를 사용중 이며, 화면 크기는 "+osWdith+" X "+osHeight+" 입니다."
+            } else if(os.indexOf("iphone") > -1){
+                document.querySelector("#footer .info").innerHTML = "현재 아이폰을 사용중 이며, 화면 크기는 "+osWdith+" X "+osHeight+" 입니다."
+            } else if(os.indexOf("android") > -1){
+                document.querySelector("#footer .info").innerHTML = "현재 안드로이드폰을 사용중 이며, 화면 크기는 "+osWdith+" X "+osHeight+" 입니다."
+            }
+        }
+        printAgent();
+        function printTime(){
+            const time = document.querySelector(".time");
+            const now = new Date();
+            time.innerHTML = now.getFullYear() + "년 " +
+            (now.getMonth()+1) + "월 " +
+            now.getDate() + "일 " +
+            now.getHours() + "시 " +
+            now.getMinutes() + "분 "
+            setTimeout("printTime()", 1000);
+        };
+        //현재 시간
+        // const printTime = () => {
+        //     const now = new Date();
+        //     const options = {
+        //         year: 'numeric',
+        //         month: 'long',   //month 옵션에서는 'numeric'이 아닌 'long' 값을 사용하면 해당 월을 한글로 표현할 수 있다.
+        //         day: '2-digit',  //long,2-digit로 바꾸면 한글이 나온다.
+        //         hour: 'numeric',
+        //         minute: 'numeric',
+        //        // second: 'numeric',
+        //         hour12: false, // 24시간제로 표시
+        //     };
+        //     const dateTimeString = now.toLocaleString('ko-KR', options);
+        //     document.querySelector(".time").innerHTML = dateTimeString
+        // };
+        printTime();
+        setInterval(printTime, 1000);
+    </script>
+</body>
+</html>

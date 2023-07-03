@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 유형01</title>
+    <!-- 폰트 -->
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <style>
+         /* reset */
+         * {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            /* 이미지 적용시 여백이 남았을때 사용 해야함. */
+            vertical-align: top;
+        }
+        /* 시각장애인(웹표준) */
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden
+        }
+        .mt10 { margin-top: 10px !important;}
+        .mt20 { margin-top: 20px !important;}
+        .mt30 { margin-top: 30px !important;}
+        .mt40 { margin-top: 40px !important;}
+        .mt50 { margin-top: 50px !important;}
+        .mt60 { margin-top: 60px !important;}
+        .mt70 { margin-top: 70px !important;}
+
+        .mb10 { margin-bottom: 10px !important;}
+        .mb20 { margin-bottom: 20px !important;}
+        .mb30 { margin-bottom: 30px !important;}
+        .mb40 { margin-bottom: 40px !important;}
+        .mb50 { margin-bottom: 50px !important;}
+        .mb60 { margin-bottom: 60px !important;}
+        .mb70 { margin-bottom: 70px !important;}
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.3); */
+        }
+        /* 
+        .section.center{
+            text-align: center;
+        } 
+        */
+        .nexon {
+            font-family: "NexonLv1Gothic";
+            /* h2태그의 기본 성질은 700[bold]로 되어있음. */
+            font-weight: 400;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .notice__small {
+            display: inline-block;
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: rgba(208, 211, 55, 0.8);
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        /* slider__wrap */
+        /* 이미지 최적화 - https://imagecompressor.com/ko/ - 파일 업로드 후 다운로드(80%까지 최적화 해줌)*/
+        .slider__wrap {}
+        .slider__inner {}
+        .slider__inner .slider {
+            height: 600px;
+            background-image: url(../asset/img/unsplash_Yn0l7uwBrpw@2x-min.jpg);
+            /* cover : width값을 기준으로 꽉채움 */
+            /* 피그마 Export에서 1x는 일반 피시
+            래트나(핸드폰) 2x */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: relative;
+            z-index: 1;
+        }
+        .slider__inner .slider::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.2);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .slider__info {
+            padding: 100px 0;
+        }
+        .slider__info .small {
+            display: inline-block;
+            padding: 1px 30px;
+            background-color: #fff;
+            color: #000;
+            font-size: 16px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .slider__info .title {
+            font-size: 80px;
+            color: #fff;
+            margin-bottom: 40px;
+            margin-left: -2px;
+        }
+        .slider__info .desc {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #fff;
+            width: 50%;
+            word-break: keep-all;
+        }
+        .slider__info .btn {
+            margin-top: 100px;
+        }
+        .slider__info .btn a {
+            display: inline-block;
+            width: 180px;
+            background-color: #fff;
+            text-align: center;
+             /* 정확히 height값 줄거면 height값 주고 line-height 주면 똑같아짐.  */
+            padding: 12px;
+            margin-right: 4px;
+        }
+        .slider__info .btn a:last-child {
+            background-color: #000;
+            color: #fff;
+        }
+        .slider__arrow {
+
+        }
+        .slider__arrow a {
+            position: absolute;
+            top: 50%;
+            background-image: url(../asset/img/icon_main.png);
+            background-size: 500px;
+            width: 30px;
+            height: 56px;
+            display: block;
+            margin-top: -28px;
+        }
+        .slider__arrow a:first-child {
+            left: 20px;
+        }
+        .slider__arrow a:last-child {
+            right: 20px; 
+            background-position: -46px 0;
+        }
+        .slider__dot {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+        }
+        .slider__dot a {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background-image: url(../asset/img/icon_main.png);
+            background-size: 500px;
+        }
+        .slider__dot a.dot {
+            background-position: -104px -1px;
+        }
+        .slider__dot a.active {
+            background-position: -83px -1px;
+        }
+        .slider__dot a.play {
+            background-position: -147px -1px;
+        }
+        .slider__dot a.stop {
+            background-position: -163px -1px;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 3),
+            only screen and (min-device-pixel-ratio: 2),
+            only screen and (min-resolution: 2dppx) {
+                .slider__inner .slider {
+                    background-image: url(../asset/img/SLIDER-TYPE04@2x-min.jpg);      
+                }
+        }
+    </style>
+</head>
+<body>
+    <section class="slider__wrap nexon section">
+        <!-- 장애인을 위해서 웹표준을 지켰습니다. -->
+        <h2 class="blind">메인 슬라이드 영역</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">event</span>
+                        <h3 class="title">야채, 과일, 고기의 좋은 점</h3>
+                        <p class="desc">
+                            영양가가 높다. 야채는 비타민, 미네랄, 식이섬유 등을 다량으로 함유하고 있어서 건강에 좋다.
+                            칼로리가 낮고 포만감을 주기 때문에 다이어트
+                        </p>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">상담 신청</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <!-- 시각장애인(웹표준) : span태그로 글씨를 남김 -->
+                        <a href="#"><span class="blind">이전 이미지</span></a>
+                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                        <a href="#" class="play"><span class="blind">플레이</span></a>
+                        <a href="#" class="stop"><span class="blind">정지</span></a>
+                    </div>
+                </div>
+                <!-- <div class="slider"></div>
+                <div class="slider"></div> -->
+            </div>
+    </section>
+</body>
+</html>

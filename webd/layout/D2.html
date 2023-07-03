@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D2</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #wrap {}
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #aside {
+            width: 200px;
+            height: 750px;
+            background-color: #868484;
+        }
+        #aside .aisde__box {}
+        #aside .aisde__box h1 {
+            width: 200px;
+            height: 200px;
+            background-color: #e8f7d4;
+        }
+        #aside .aisde__box nav {}
+
+        #main {
+            width: calc(100% - 200px);
+            height: 750px;
+            background-color: #6e5050;
+        }
+        #main .main__box {
+            display: flex;
+        }
+        #main .main__box .slider {
+            width: 800px;
+            height: 400px;
+            background-color: #b85252;
+        }
+        #main .main__box .banner {
+            width: 400px;
+            height: 400px;
+            background-color: #551010;
+        }
+        #main .notice {
+            width: 1000px;
+            height: 350px;
+            background-color: #d6b5f1;
+        }
+
+        #footer {
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 200px;
+            height: 100px;
+            background-color: #bdf0e3;
+        }
+        #footer .footer2 {
+            width: 800px;
+            height: 100px;
+            background-color: #5bc7ac;
+        }
+        #footer .footer3 {
+            width: 200px;
+            height: 100px;
+            background-color: #147a61;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="container">
+        <div class="box">
+            <aside id="aside">
+                <div class="container">
+                    <div class="aisde__box">
+                        <h1></h1>
+                        <nav></nav>
+                    </div>
+                </div>
+            </aside>
+            <main id="main">
+                    <div class="main__box">
+                        <div class="slider"></div>
+                        <div class="banner"></div>
+                    </div>
+                    <div class="notice">
+                        
+                    </div>
+            </main>
+        </div>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>
+</body>
+</html>

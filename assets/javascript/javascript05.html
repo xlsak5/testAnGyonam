@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript : 문자열 객체</title>
+
+     <!-- CSS -->
+     <link rel="stylesheet" href="./assets/reset.css">
+     <link rel="stylesheet" href="../css/default.min.css">
+
+    <link rel="icon" type="image/png" sizes="192x192"  href="../ico/javascript192x192.png">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li class="active"><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="last">
+                <li><a href="javascript12.html">데이터 효과</a></li>
+                <li><a href="javascript13.html">검색 효과</a></li>
+                <li><a href="javascript14.html">퀴즈 효과</a></li>
+                <li><a href="javascript15.html">마우스 효과</a></li>
+                <li><a href="javascript16.html">슬라이드 효과</a></li>
+                <li><a href="javascript17.html">패럴렉스</a></li>
+                <li><a href="javascript18.html">게임 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main"> 
+        <div class="container">
+            <div class="main__menu"> 
+                <ul>
+                    <li><a href="#">문자열 메서드 : toUpperCase()</a></li>
+                    <li><a href="#">문자열 메서드 : toLowerCase()</a></li>
+                    <li><a href="#">문자열 메서드 : trim()</a>★</li>
+                    <li><a href="#">문자열 메서드 : trimStart()</a></li>
+                    <li><a href="#">문자열 메서드 : trimEnd()</a></li>
+                    <li><a href="#">문자열 메서드 : slice()</a></li>
+                    <li><a href="#">문자열 메서드 : substring()</a></li>
+                    <li><a href="#">문자열 메서드 : substr()</a></li>
+                    <li><a href="#">문자열 메서드 : split()</a>★★</li>
+                    <li><a href="#">문자열 메서드 : replace()</a>★</li>
+                    <li><a href="#">문자열 메서드 : replaceAll()</a></li>
+                    <li><a href="#">문자열 메서드 : concat()</a></li>
+                    <li><a href="#">문자열 메서드 : repeat()</a></li>
+                    <li><a href="#">문자열 메서드 : padStart()</a></li>
+                    <li><a href="#">문자열 메서드 : padEnd()</a></li>
+                    <li><a href="#">문자열 메서드 : indexOf()</a></li>
+                    <li><a href="#">문자열 메서드 : lastindexOf()</a></li>
+                    <li><a href="#">문자열 메서드 : includes()</a></li>
+                    <li><a href="#">문자열 메서드 : search()</a></li>
+                    <li><a href="#">문자열 메서드 : match()</a></li>
+                    <li><a href="#">문자열 메서드 : charAt()</a></li>
+                    <li><a href="#">문자열 메서드 : charCodeAt()</a></li>
+                    <li><a href="#">문자열 메서드 : startsWidth()</a></li>
+                    <li><a href="#">문자열 메서드 : endsWidth()</a></li>
+                </ul>
+                <!-- 
+                    join, pop, 문자열 
+                    5번에서 
+                    values, sort★, slice, shift, unshift, push★, pop, join indexOf★, map★★★, 
+                    forEach()★★★,find★
+                -->
+                <!-- 
+                    6번에서
+                    includes, indexOf, match, search, sliice★★, substring★, split★★★, trim★, 
+                -->
+                <ul>
+                    <li><a href="#sample01">string.prototype.at()                메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 요소를 반환합니다.</a></li>
+                    <li><a href="#sample02">string.prototype.charAt()            메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 단일문자를 반환합니다.</a></li>
+                    <li><a href="#sample03">string.prototype.charCodeAt()        메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 정수 값을 반환합니다.</a></li>
+                    <li><a href="#sample04">string.prototype.charPointAt()       메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
+                    <li><a href="#sample05">string.prototype.concat()            메서드는 매개변수로 전달된 문자열을 받어, 결합된 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample06">string.prototype.includes()          메서드는 문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</a></li>
+                    <li><a href="#sample07">string.prototype.indexOf()           메서드는 문자열을 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</a></li>
+                    <li><a href="#sample08">string.prototype.lastIndexOf()       메서드는 문자열을 역순으로 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</a></li>
+                    <li><a href="#sample09">string.prototype.localeCompare()     메서드는 문자열과 문자열을 비교하여, 수치(음수, 양수, 0)을 반환합니다.</a></li>
+                    <li><a href="#sample10">string.prototype.match()             메서드는 문자열(정규식)을 검색하고, 문자열(배열)을 반환합니다. </a></li>
+                    <li><a href="#sample11">string.prototype.matchAll()          메서드는 문자열(정규식)을 검색하고, 일치하는 모든 문자열(배열)을 반환합니다. </a></li>
+                    <li><a href="#sample12">string.prototype.normalize()         메서드는 주어진 문자열을 정규화된 형태로 반환합니다.</a></li>
+                    <li><a href="#sample13">string.prototype.padEnd()            메서드는 주어진 길이에 맞게 뒤 문자열을 채우고, 새로운 문자열을 반환합니다. </a></li>
+                    <li><a href="#sample14">string.prototype.padStart()          메서드는 주어진 길이에 맞게 앞 문자열을 채우고, 새로운 문자열을 반환합니다</a>.</li>
+                    <li><a href="#sample15">string.prototype.repeat()            메서드는 주어진 횟수만큼 반복 복사하여, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample16">string.prototype.replace()           메서드는 문자열에서 특정 문자열을 교체하여, 새로은 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample17">string.prototype.replaceAll()        메서드는 문자열에서 특정 문자열을 모두 교체하여, 새로은 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample18">string.prototype.search()            메서드는 문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</a></li>
+                    <li><a href="#sample19">●string.prototype.slice()             메서드는 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample20">string.prototype.substring()         메서드는 문자열에서 시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample21">string.prototype.substr()            메서드는 문자열에서 시작 위치에서 길이 값을 추출하여, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample22">●string.prototype.split()             메서드는 문자열을 구분자로 구분하고, 여러 개의 문자열(배열)을 반환합니다.</a></li>
+                    <li><a href="#sample23">string.prototype.startsWith()        메서드는 시작하는 문자열에서 특정 문자열로 시작하는 확인하여, 그 결과를 불린(true, false)로 반환합니다.</a></li>
+                    <li><a href="#sample24">string.prototype.endsWith()          메서드는 끝나는 문자열에서 특정 문자열로 끝나는지 확인하여, 그 결과를 불린(true, false)로 반환합니다.</a></li>
+                    <li><a href="#sample25">string.prototype.toLocaleLowerCase() 메서드는 문자열을 소문자로 설정하고, 로케일 소문자 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample26">string.prototype.toLocaleUpperCase() 메서드는 문자열을 대문자로 설정하고, 로케일 대문자 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample27">string.prototype.toLowerCase()       메서드는 문자열을 소문자로 설정하고, 소문자 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample28">string.prototype.toUpperCase()       메서드는 문자열을 대문자로 설정하고, 대문자 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample29">string.prototype.toString()          메서드는 데이터를 문자열로 변환하고, 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample30">string.prototype.trim()              메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample31">string.prototype.trimEnd()           메서드는 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample32">string.prototype.trimStart()         메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</a></li>
+                    <li><a href="#sample33">string.prototype.valueOf()           메서드는 객체의 원시값을 반환합니다.</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="sample06" class="sample">
+            <div id="sample06" class="sample">
+                <h3>06. includes()</h3>
+                <div class="notice">"문자열".indexOf(검색값, 위치값)</div>
+                <ul>
+                    <li>문자열이 있으면 true / 없으면 false를 반환합니다.</li>
+                    <li></li>
+                </ul>
+            <pre><code class="language-js">{
+"javascript reference".includes("javascript"); //true
+"javascript reference".includes("J"); //false
+"javascript reference".includes("j"); //true
+"javascript reference".includes("a"); // ture
+"javascript reference".includes("reference"); //true
+"javascript reference".includes("reference", 11); //true
+"javascript reference".includes("reference", 12); //false           
+}
+            </code></pre>
+            </div>
+            </div>
+        <div id="sample07" class="sample">
+            <div id="sample07" class="sample">
+                <h3>07. indexOf()</h3>
+                <div class="notice">"문자열".indexOf(검색값, 위치값)</div>
+                <ul>
+                    <li>메서드는 문자열을 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</li>
+                    <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                    <li>대소문자를 구별합니다.</li>
+                </ul>
+            <pre><code class="language-js">{
+//j는 0 / a는 1 / v는 2
+"javascript refercence".indexOf("javascript"); // 0
+"javascript refercence".indexOf("J"); //-1
+"javascript refercence".indexOf("j"); //0
+"javascript refercence".indexOf("a"); //1
+"javascript refercence".indexOf("ja"); //0
+"javascript refercence".indexOf("jv"); //-1
+"javascript refercence".indexOf("refercence"); //11
+"javascript refercence".indexOf("r"); //6
+"javascript refercence".indexOf("re"); //11
+"javascript refercence".indexOf("javascript", 0); //0 //0부터 시작해서 javascript를 찾아라
+"javascript refercence".indexOf("javascript", -1); //0 //-1부터 시작해서 javascript를 찾아라.. 1부터는 없어서 -1이 나옴
+"javascript refercence".indexOf("refercence", 0); //11
+"javascript refercence".indexOf("refercence", 11); //11
+"javascript refercence".indexOf("refercence", 12); //-1
+"javascript refercence".indexOf("r", 7); //11
+"javascript refercence".indexOf("r", 12); //15
+}
+            </code></pre>
+            </div>
+            </div>
+            <div id="sample08" class="sample">
+                <div id="sample08" class="sample">
+                    <h3>08. lastIndexOf()</h3>
+                    <div class="notice">"문자열".lastIndexOf(검색값, 위치값)</div>
+                    <ul>
+                        <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 </li>
+                        <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                        <li>대소문자를 구별합니다.</li>
+                    </ul>
+                <pre><code class="language-js">{
+
+}
+                </code></pre>
+                </div>
+                </div>      
+            <div id="sample10" class="sample">
+                <div id="sample10" class="sample">
+                    <h3>10. match()</h3>
+                    <div class="notice">"문자열".match(검색값)<br>"문자열".match(정규식표현)</div>
+                    <ul>
+                        <li>문자열(정규식)을 검색하고, 문자값(배열)을 반환합니다.</li>
+                        <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 null을 반환합니다.</li>
+                        <li>대소문자를 구별합니다.</li>
+                        <li>match() 메서드는 문자값(배열)을 반환하고, search() 메서드는 위치값(숫자)를 반환하는 것이 다릅니다.</li>
+                    </ul>
+                <pre><code class="language-js">{
+"javascript reference".match("javascript"); // javascript
+"javascript reference".match("reference"); // reference
+"javascript reference".match("r"); // r
+"javascript reference".match("R"); // null
+"javascript reference".match("ja"); // ja
+"javascript reference".match(/reference/); // reference
+"javascript reference".match(/Reference/); // null
+"javascript reference".match(/Reference/i); // reference
+"javascript reference".match(/Reference/g); // null
+"javascript reference".match(/r/); // r
+"javascript reference".match(/r/g); // r r r
+"javascript reference".match(/w/g); // null
+"javascript reference".match(/r/ig); // r r r
+}
+                </code></pre>
+                </div>
+                </div>   
+
+            <div id="sample18" class="sample">
+                <div id="sample18" class="sample">
+                    <h3>18. search()</h3>
+                    <div class="notice">"문자열".search(검색값)<br>"문자열".search(정규식표현)</div>
+                    <ul>
+                        <li>문자열(정규식)을 검색하고, 위치값(숫자)을 반환합니다.</li>
+                        <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
+                        <li>대소문자를 구별합니다.</li>
+                    </ul>
+                <pre><code class="language-js">{
+"javascript reference".search("javascript"); // 0
+"javascript reference".search("reference"); // 11
+"javascript reference".search("r"); // 6
+"javascript reference".search("a"); // 1
+"javascript reference".search("jv"); // -1
+"javascript reference".search("J"); // -1
+"javascript reference".search(/reference/); // 11
+"javascript reference".search(/Reference/); // -1
+"javascript reference".search(/Reference/i); // 11
+"javascript reference".search(/[a-z]/g); // 0
+console.log("javascript reference".search("r")); // 6
+}
+                </code></pre>
+                </div>
+                </div>   
+
+                <div id="sample29" class="sample">
+                    <h3>19. slice()</h3>
+                    <div class="notice">"배열".slice(시작 위치, [끝나는 위치])</div>
+                    <ul>
+                        <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 배열을 반환합니다.</li>
+                    </ul>
+                </div>
+                <div class="script">
+<pre><code class="language-js">{
+    // slice(시작위치); -- 시작 위치부터 다 출력
+    ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(0);
+    console.log( ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(0)); //"j", "a", "v", "a", "s", "c", "r", "i", "p", "t"
+    console.log( ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(1)); //"a", "v", "a", "s", "c", "r", "i", "p", "t"
+    console.log( ["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(2)); //"v", "a", "s", "c", "r", "i", "p", "t"
+
+    // slice(시작위치, 끝나는 위치); -- 시작 위치부터 끝나는 위치 "직전"까지만 출력
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(0, 1)); //"j"
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(1, 2)); //"a"
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(0, 2)); //"j", "a"
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(0, 3)); //"j", "a", "v"
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(5, 10)); //'c', 'r', 'i', 'p', 't'
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(5, -1)); //'c', 'r', 'i', 'p'
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(5, -2)); //'c', 'r', 'i'
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(-1)); //"t"
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(-2)); //"p","t"
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(-3)); //"i", "p", "t"
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(-3, -1)); //"i", "p"
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(-3, -2)); //"i"
+
+    // 앞에가 더 커야 함.
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(-3, -3)); // []
+    console.log(["j", "a", "v", "a", "s", "c", "r", "i", "p", "t"].slice(-3, -4)); // []
+    console.log("javascript".slice(0)); // javascript
+    console.log("javascript".slice(1)); // avascript
+    console.log("javascript".slice(2)); // vascript
+    console.log("javascript".slice(0, 1)); // j
+    console.log("javascript".slice(1, 2)); // a
+    console.log("javascript".slice(0, 2)); // ja
+    console.log("javascript".slice(0, 3)); // jav
+    console.log("javascript".slice(5, 10)); // cript
+    console.log("javascript".slice(5, -1)); // crip
+    console.log("javascript".slice(5, -2)); // cri
+    console.log("javascript".slice(-1)); // t
+    console.log("javascript".slice(-2)); // pt
+    console.log("javascript".slice(-3)); // ipt
+    console.log("javascript".slice(-3, -1)); // ip
+    console.log("javascript".slice(-3, -2)); // i
+}
+</code></pre>
+                </div>
+            </div>
+
+            <div id="sample30" class="sample">
+                <h3>30. trim()</h3>
+                <div class="notice">"배열".trim()</div>
+                <ul>
+                    <li>문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                </ul>
+            </div>
+            <div class="script">
+<pre><code class="language-js">{
+    console.log(" javascript ".trim()); //javascript
+    console.log("javascript ".trim()); //javascript
+    console.log(" java script".trim()); //javascript
+}
+</code></pre>
+            </div>
+        </div>
+
+        <div id="sample31" class="sample">
+            <h3>31. trimStart()</h3>
+            <div class="notice">"배열".trimStart()</div>
+            <ul>
+                <li> 문자열의 앞공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+            </ul>
+        </div>
+        <div class="script">
+<pre><code class="language-js">{
+    console.log(" javascript ".trimStart()); //javascript 
+}
+</code></pre>
+        </div>
+    </div>
+
+    <div id="sample32" class="sample">
+        <h3>32. trimEnd()</h3>
+        <div class="notice">"배열".trimEnd()</div>
+        <ul>
+            <li> 문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+        </ul>
+    </div>
+    <div class="script">
+<pre><code class="language-js">{
+    console.log(" javascript ".trimEnd()); // javascript
+}
+</code></pre>
+    </div>
+
+    
+</div>
+         
+
+                
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:skadldldl123@gmail.com">mailto:skadldldl123@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        // split(구분자, 제한)
+        // console.log("javascript".split("")); //["j","a","v","a","s","c","r","i","p","t"]
+        // console.log("java script".split(" ")); //['java', 'script']
+        // console.log("java scr ipt".split(" ")); //['java', 'scr', 'ipt']
+        // console.log("java scr ipt".split("", 1)); //['j']
+        // console.log("java scr ipt".split("", 2)); //['j', 'a']
+        // console.log("java scr ipt".split("", 3)); //['j', 'a', 'v']
+        // console.log("java scr ipt".split(" ", 1)); //['java']
+        // console.log("java scr ipt".split(" ", 2)); //['java', 'scr']
+        // console.log("java scr ipt".split(" ", 3)); //['java', 'scr', 'ipt']
+        // // 똑같은 단어를 지우고 나머지를 출력 함.
+        // console.log("javascript".split("j")); //['', 'avascript']
+        // console.log("javascript".split("a")); //['j', 'v', 'script']
+        // console.log("javascript".split("e")); //['javascript']
+        // console.log("java/scr/ipt".split("e")); //['java/scr/ipt']
+        // console.log("java/scr/ipt".split("/")); // ['java', 'scr', 'ipt']
+        // console.log("java&scr!ipt".split("&")); // ['java', 'scr!ipt']
+        // console.log("java&scr!ipt".split("!")); // ['java&scr', 'ipt']
+        // console.log("java&scr!ipt".split("/&|\!/")); // ['java&scr!ipt']
+        // // 뒤에 join을 쓰면 문자열로 나옴
+        // console.log("javascript".split("").join()) // j,a,v,a,s,c,r,i,p,t 
+        // console.log("javascript".split("").join("*")) // j*a*v*a*s*c*r*i*p*t
+        // console.log("javascript".split("").reverse().join("*")) // t*p*i*r*c*s*a*v*a*j
+        // console.log("javascript".split("").reverse().join("/")) // t/p/i/r/c/s/a/v/a/j
+
+
+        // "javascript reference".lastIndexOf("javascript");       // 0
+        // "javascript reference".lastIndexOf("javascripts");      // -1
+        // "javascript reference".lastIndexOf("j");                // 0
+        // "javascript reference".lastIndexOf("a");                // 3
+        // "javascript reference".lastIndexOf("jv");               // -1
+        // "javascript reference".lastIndexOf("reference");        // 11
+        // "javascript reference".lastIndexOf("r");                // 15
+
+        // //선택자
+        // const searchBox = document.querySelector(".search__box input");     //검색
+        // const searchList = document.querySelectorAll(".search__list li");   //목록리스트
+        // const searchTOT = document.querySelector(".search__info span");      //갯수를 넣어줄 span
+        // //num 갯수를 searchBox.addEventListener("keyup",)에서 키업 이벤트가 발생할때마다 갯수를 갱신해주는 변수
+        // let num =0;         
+        // //검색
+        
+        // searchBox.addEventListener("keyup", ()=>{
+        //     const userWord = searchBox.value;   //사용자가입력한 키워드
+
+        //     searchList.forEach((el , i)=>{
+        //         // const cssName = el.getAttribute("data-name");
+        //         const cssName = el.dataset.name;
+        //         if(cssName.indexOf(userWord)){
+        //             //cssName.indexOf(userWord)이 값이 없을경우 
+        //             el.classList.add("hide");
+        //         }else{
+        //             //cssName.indexOf(userWord)이 값이 있을경우 
+                    
+        //             //데이터가 있을경우엔 remove를 써서 hide를 제거하기 때문에 화면에 출력됨
+        //             //그리고 num++을 통해서 있는 데이터값을 1 더해줌
+        //             num++;
+        //             el.classList.remove("hide");
+        //         }
+        //         if(i == searchList.length-1 && num>=0  ){
+        //             searchTOT.innerText = num;
+        //             console.log("chk")
+        //             num =0;
+        //         }    
+        //     })
+        // });
+        // //상단에서 querySelectorAll로 가져온 목록리스트의 길이를 searchList.length로 구할수있어요
+        // //목록리스트의 길이라고 쓰고 갯수라고 표현하는것 searchTOT에 값을 innerText로 넣어줘요
+        // searchTOT.innerText = searchList.length;
+    </script>
+    <footer id="footer">
+        <a href="mailto:getgrovy@gmail.com">getgrovy@gmail.com</a>
+    </footer>
+    </script>
+</html>

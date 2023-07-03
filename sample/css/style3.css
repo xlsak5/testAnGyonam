@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 1260px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dis {
+    display: none;
+}
+
+
+/* header */
+#header {
+    padding: 20px 0;
+    background-color: #131010;
+    text-align: center;
+}
+.header__wrap {}
+.header__wrap h1 {
+    color: #fff;
+}
+
+
+/* section */
+#section {
+    padding: 120px 0 0;
+}
+.section__wrap {}
+.quez__wrap {
+    width: 500px;
+}
+.section__wrap .question__wrap {
+    margin: 20px;
+}
+.question__wrap .kind {
+    padding: 20px 0;
+    border: 2px solid #52af2d;
+}
+.question__wrap .kind span {}
+.question__wrap .kind em {}
+.question__wrap .content {
+    padding: 20px 0;
+    border: 2px solid #18d437;
+}
+.question__wrap .content span {}
+.question__wrap .content em {}
+.question__wrap .true {
+    padding: 20px 0;
+    border: 2px solid #21882f;
+}
+.question__wrap .true{
+    padding:20px;
+}
+.question__wrap .true .enter {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.question__wrap .true .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+/* footer */
+#footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #131010;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer__wrap {}
+.footer__wrap address {}
+.footer__wrap address a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+}

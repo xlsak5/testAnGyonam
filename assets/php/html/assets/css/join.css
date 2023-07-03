@@ -1,0 +1,7 @@
+.join__form button {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--color__black);
+    color: var(--color__white);
+    margin: 0 auto;
+}

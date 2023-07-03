@@ -1,0 +1,152 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/Cafe24Classictype/Cafe24ClassicType.css');
+@import url('https://webfontworld.github.io/nongshim/Ansungtangmyun.css');
+@import url('https://webfontworld.github.io/SaenggeoJincheon/SaenggeoJincheon.css');
+@import url('https://webfontworld.github.io/crown/CrownMychew.css');
+@import url('https://webfontworld.github.io/earlyfont/EF_Macho.css');
+@import url('https://webfontworld.github.io/knps/KNPSBandali.css');
+@import url('https://webfontworld.github.io/Noto/NotoSansKR.css');
+@import url('https://webfontworld.github.io/chungbuk/CBNUJIKJI.css');
+@import url('https://webfontworld.github.io/wando/WandoCleanSea.css');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+h1, h2, h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+li, ul, ol {
+    list-style: normal;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: noprmal;
+}
+.font01 {
+    font-family: "NexonLv1Gothic";
+    font-weight: 300;
+}
+.font02 {
+    font-family: "KNPSBandali";
+    /* font-family: "Cafe24ClassicType"; */
+}
+.font03 {
+    font-family: "Ansungtangmyun";
+}
+.font04 {
+    font-family: "SaenggeoJincheon";
+}
+.font05 {
+    font-family: "CrownMychew";
+}
+.font06 {
+    font-family: "EF_Macho";
+}
+.font07 {
+    font-family: "KNPSBandali";
+}
+.font08 {
+    font-family: "NotoSansKR";
+}
+.font09 {
+    font-family: "CBNUJIKJI";
+}
+.font10 {
+    font-family: "WandoCleanSea";
+}
+/* reset */
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fbff00;
+    background-position: center center;
+    background-size: cover;
+     /* overflow: hidden; */
+}
+body.img01 {
+    background-image: url(../img/slider_bg01a.jpg);
+}
+body.img02 {
+    background-image: url(../img/slider_bg02a.jpg);
+}
+body.img03 {
+    background-image: url(../img/slider_bg03a.jpg);
+}
+body.img04 {
+    background-image: url(../img/slider_bg04a.jpg);
+}
+body.img05 {
+    background-image: url(../img/slider_bg05a.jpg);
+}
+body.img06 {
+    background-image: url(../img/slider_bg06a.jpg);
+}
+body.img07 {
+    background-image: url(../img/slider_bg07a.jpg);
+}
+body.img08 {
+    background-image: url(../img/slider_bg08a.jpg);
+}
+body.img09 {
+    background-image: url(../img/slider_bg09a.jpg);
+}
+body.img10 {
+    background-image: url(../img/slider_bg10a.jpg);
+}
+body::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /* background: rgba(5, 36, 70, 0.87); */
+    background-color: #242222;
+    z-index: -1;
+}
+body.bg01::after {
+    background: #242222;
+}
+body.bg02::after {
+    background: rgba(168, 128, 128, 0.87);
+}
+body.bg03::after {
+    background: rgba(97, 105, 138, 0.97);
+}
+body.bg04::after {
+    background: rgba(19, 53, 87, 0.87);
+}
+body.bg05::after {
+    background: rgba(23, 46, 70, 0.87);
+}
+body.bg06::after {
+    background: rgba(34, 55, 78, 0.87);
+}
+body.bg07::after {
+    background: rgba(38, 58, 80, 0.87);
+}
+body.bg08::after {
+    background: rgba(45, 64, 85, 0.87);
+}
+body.bg09::after {
+    background: rgba(43, 58, 73, 0.87);
+}
+body.bg10::after {
+    background: rgba(85, 126, 31, 0.87);
+} 

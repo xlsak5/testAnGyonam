@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 1260p;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dis {
+    display: none;
+}
+
+/* header */
+#header {
+    background-color: #352f2f;
+    padding: 20px 0;
+}
+.header__wrap {}
+.header__wrap h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
+
+/* section */
+#section {
+    padding: 120px 0 0;
+}
+.section__wrap {}
+.section__wrap .content__wrap {
+    width: 500px;
+}
+.section__wrap .content__wrap .kind {
+    padding: 20px;
+    border: 2px solid #88369c;
+    text-align: center;
+}
+.section__wrap .content__wrap .kind span {
+    font-size: 25px;
+    font-weight: bold;
+}
+.section__wrap .content__wrap .question {
+    padding: 20px;
+    border: 2px solid #722d6f;
+}
+.section__wrap .content__wrap .question span {
+    font-size: 18px;
+    font-weight: bold;    
+}
+.section__wrap .content__wrap .answer__radio {
+    padding: 20px;
+    border: 2px solid #7c366d;
+}
+.section__wrap .content__wrap .answer__radio > div {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.section__wrap .content__wrap .answer__radio .an__ra {
+    width: 18px;
+}
+.section__wrap .content__wrap .answer__radio label {
+}
+.section__wrap .content__wrap .answer__btn {
+    border: 1px solid #b720bd;
+    padding: 10px;
+}
+.section__wrap .content__wrap .answer__btn .btn{
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+
+/* footer */
+#footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #161313;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer__wrap {}
+.footer__wrap address {}
+.footer__wrap address a {
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+
+

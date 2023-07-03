@@ -1,0 +1,360 @@
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E1</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      width: 1280px;
+      margin: 0 auto;
+    }
+    #wrap {}
+    .wrap__box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    /* header */
+    #header {
+      width: 200px;
+      height: 650px;
+      /* height: calc(100% - 120px); */
+      background-color: #c9c9c9;
+    }
+    .header__box {
+    }
+    .header__box h1 {
+      height: 100px;
+      background-color: #f8a8a8;
+    }
+    .header__box nav {
+      padding: 10px;
+      width: 180px;
+    }
+    .header__box nav > ul {}
+    .header__box nav > ul > li {
+      list-style: none;
+      border: 1px solid #000;
+    }
+    .header__box nav > ul > li > a {
+      display: block;
+      color: #000;
+      padding: 5px;
+      text-decoration: none;
+    }
+    .header__box .sitemap {
+      padding: 5px;
+    }
+    .header__box .sitemap ul {
+      display: flex;
+    }
+    .header__box .sitemap ul li {
+      list-style: none;
+      margin-right: 15px;
+      position: relative;
+    }
+    .header__box .sitemap ul li:first-child::before {
+      content: "";
+      width: 2px;
+      height: 20px;
+      background-color: #000;
+      position: absolute;
+      right: -7px;
+      top: 1px;
+    }
+    .header__box .sitemap ul li a {
+      display: inline-block;
+    }
+ 
+    /* main */
+    #main {
+      width: 400px;
+      background-color: #7c7b7b;
+    }
+    .main__box {}
+    
+    .main__desc {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #000;
+    }
+    .main__desc .img {
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+      border-radius: 50%;
+      background-color: #000;
+      margin-right: 10px;
+    }
+    .main__desc .desc {
+    }
+    .main__desc .desc p.one {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .main__desc .desc p.two {}
+
+    .main__notice {
+      padding: 10px 10px 30px;
+      border-bottom: 1px solid #000;
+    }
+    .main__notice > ul {}
+    .main__notice > ul > li {
+      list-style: none;
+    }
+    .main__notice > ul > li > a {
+      display: inline-block;
+      border: 1px solid #000;
+      border-bottom: none;
+      padding: 5px;
+      color: #000;
+      text-decoration: none;
+    }
+    .main__notice >  ul > li > ul {}
+    .main__notice >  ul > li > ul > li {
+      list-style:none;
+    }
+    .main__notice > ul > li > ul > li > a {
+      display: block;
+      border-bottom: 1px solid #000;
+      padding: 5px;
+      color: #000;
+      text-decoration: none;
+    }
+    .main__notice > ul > li > ul > li:first-child > a {
+      border-top: 1px solid #000;
+    }
+    
+    .main__gal {
+      padding: 10px 10px 40px;
+      border-bottom: 1px solid #000;
+    }
+    .gal__box {}
+    .gal__box > ul {}
+    .gal__box > ul > li {
+      list-style: none;
+    }
+    .gal__box > ul > li > a {
+      display: inline-block;
+      color: #000;
+      text-decoration: none;
+      border: 1px solid #000;
+      border-bottom: none;
+    }
+    .gal__box > ul > li > p {
+      border-bottom: 1px solid #000;
+    }
+    .gal__box > ul > li > ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .gal__box > ul > li > ul > li {
+      list-style: none;
+      margin-top: 15px;
+    }
+    .gal__box > ul > li > ul > li:before {
+      content: "";
+    }
+    .gal__box > ul > li > ul > li > a {
+      display: inline-block;
+      width: 180px;
+      height: 100px;
+      border: 1px solid #000;
+    }
+    .gal__box > ul > li > ul > li > p {
+      font-size: 14px;
+    }
+
+    .main__img {
+      padding: 10px;
+    }
+    .main__img ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .main__img ul li {
+      list-style: none;
+    }
+    .main__img ul li a {
+      display: inline-block;
+      width: 50px; 
+      height: 50px;
+      border: 1px solid #000;
+    }
+    .main__img ul li p {
+      text-align: center;
+    }
+
+    /* slider */
+    #slider {
+      width: calc(100% - 200px - 400px);
+      background-color: #5a5858;
+      text-align: center;
+      line-height: 40;
+    }
+
+    /* footer */
+    #footer {}
+    .footer__box {
+      display: flex;
+      height: 120px;
+      background-color: #666464;
+    }
+    .footer__box .footer__logo {
+      width: 30%;
+      height: 120px;
+      background-color: #fde5e5;
+      font-size: 30px;
+      text-align: center;
+      line-height: 120px;
+    }
+    .footer__box .footer_contents {
+      width: 70%;
+      height: 120px;
+      background-color: #fa9696;
+    }
+    .footer__box .footer_contents .box1 {
+      border-bottom: 1px dashed #000;
+      padding: 10px 0 10px 10px;
+    }
+    .footer__box .footer_contents .box1 ul {
+      display: flex;
+    }
+    .footer__box .footer_contents .box1 ul li {
+      list-style: none;
+      position: relative;
+    }
+    .footer__box .footer_contents .box1 ul li:after {
+      content: "";
+      width: 2px;
+      height: 15px;
+      background-color: #000;
+      position: absolute; 
+      left: -1px;
+      top: 9px;
+    }
+    .footer__box .footer_contents .box1 ul li:first-child:after{
+      content: "";
+      display: none;
+    }
+    .footer__box .footer_contents .box1 ul li a {
+      display: block;
+      padding: 5px;
+      color: #000;
+      text-decoration: none;
+    }
+    .footer__box .footer_contents .box2 {
+      padding: 10px 0 10px 10px;
+    }
+    .footer__box .footer_contents .box2 p {}
+  </style>
+ </head>
+
+ <body>
+    <div id="wrap">
+      <div class="wrap__box container">
+        <header id="header">
+            <div class="header__box">
+              <h1>로고</h1>
+
+              <nav>
+                <ul>
+                  <li><a href="#">MENU1</a></li>
+                  <li><a href="#">MENU2</a></li>
+                  <li><a href="#">MENU3</a></li>
+                  <li><a href="#">MENU4</a></li>
+                </ul>
+              </nav>
+
+              <div class="sitemap">
+                <ul>
+                  <li><a href="#">SPOTMENU1</a></li>
+                  <li><a href="#">SPOTMENU2</a></li>
+                </ul>
+              </div>
+            </div>
+        </header>
+        <main id="main">
+            <div class="main__box">
+              <section class="main__desc">
+                <div class="img"></div>
+                <div class="desc">
+                  <p class="one">Lorem ipsum dolor sit amet</p>
+                  <p class="two">Lorem ipsum dolor sit amet<br> consectetur adipisicing elit.</p>
+                </div>
+              </section>
+              <section class="main__notice">
+                <ul>
+                  <li><a href="#">공지사항</a>
+                    <ul>
+                      <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                      <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                      <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    </ul>
+                  </li>
+                </ul>
+
+              </section>
+              <section class="main__gal">
+                <div class="gal__box">
+                  <ul>
+                    <li><a href="#">갤러리</a><p></p>
+                      <ul>
+                        <li><a href="#"></a><p>Lorem ipsum dolor sit amet.</p></li>
+                        <li><a href="#"></a><p>Lorem ipsum dolor sit amet.</p></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              <section class="main__img">
+                <ul>
+                  <li><a href="#"></a><p>LINK1</p></li>
+                  <li><a href="#"></a><p>LINK2</p></li>
+                  <li><a href="#"></a><p>LINK3</p></li>
+                  <li><a href="#"></a><p>LINK4</p></li>
+                </ul>
+              </section>
+            </div>
+        </main>
+        <section id="slider">slider</section> 
+      </div>
+      <footer id="footer">
+        <div class="container">
+          <div class="footer__box">
+            <h5 class="footer__logo">LOGO</h5>
+            <div class="footer_contents">
+              <div class="box1">
+                <nav>
+                  <ul>
+                    <li><a href="#">FOOTERMENU1</a></li>
+                    <li><a href="#">FOOTERMENU2</a></li>
+                    <li><a href="#">FOOTERMENU3</a></li>
+                    <li><a href="#">FOOTERMENU4</a></li>
+                    <li><a href="#">FOOTERMENU5</a></li>
+                    <li><a href="#">FOOTERMENU7</a></li>
+                    <li><a href="#">FOOTERMENU8</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="box2">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero amet dignissimos animi obcaecati tempore rem, et dolore voluptatum sunt inventore culpa molestiae aliquid, hic exercitationem cumque odit, dolorem pariatur soluta.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>   
+ </body>
+ </html>

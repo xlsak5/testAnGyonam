@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2</title>
+
+    <style>
+        /* 공통 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+
+        /* wrap */
+        #wrap {}
+
+        /* header */
+        #header {}
+        #header .header__box {
+            height: 100px;
+            background-color: #c4c4c4;
+        }
+        #header .header__box h1 {
+            width: 200px;
+            height: 100px;
+            background-color: #f8cdcd;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        /* nav */
+        #nav {
+            height: 150px;
+            background-color: #000;
+        }
+        #nav .container {
+            background-color: #696868;
+        }
+        #nav > ul {
+            display: flex;
+            justify-content: right;
+        }
+        #nav > ul > li {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #000;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+        #nav > ul > li > a {
+            display: inline-block;
+            padding: 15px;
+            transition: all 0.3s;
+        }
+        #nav > ul > li:hover > a {
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* nav__sub */
+        #nav > ul > li > ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 52px;
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+        #nav > ul > li > ul > li {
+            /* display: none; */
+        }
+        #nav > ul > li > ul > li > a {
+            display: inline-block;
+            padding: 2px;
+        }
+        #nav > ul > li > ul > li:hover a {
+            background-color: #ccc;
+        }
+
+
+        /* slide */
+        #slide {}
+        #slide .slide__box {
+            height: 150px;
+            background-color: #7a7979;
+        }
+        #slide .slide__box p {
+            text-align: center;
+            line-height: 150px;
+        }
+
+        /* banner */
+        #banner {}
+        .banner__box {
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+        }
+        #banner .content1 {
+            width: 33.3333%;
+            background-color: #ebaaaa;
+        }
+        #banner .content2 {
+            width: 33.3333%;
+            background-color: #c76c6c;
+        }
+        #banner .content3 {
+            width: 33.3333%;
+            background-color: #992b2b;
+        }
+
+        /* footer */
+        #footer {
+            text-align: center;
+        }
+        #footer .footer__box {
+            display: flex;
+            justify-content: space-between;
+        }
+        #footer .footer__box .f__logo {
+            width: 20%;
+            background-color: #e3fae6;
+        }
+        #footer .footer__box .f__copy {
+            width: 80%;
+            background-color: #91dd9c;
+        }
+        #footer .footer__box .f__site {
+            width: 20%;
+            background-color: #34b145;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header__box">
+                    <h1>로고</h1>
+                </div>
+            </div>
+        </header>
+        <nav id="nav" class="container">
+                <ul>
+                    <li><a href="#" class="menu">MENU-1</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu">MENU-2</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu">MENU-3</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="menu">MENU-4</a>
+                        <ul class="submenu">
+                            <li><a href="#">subMenu-1</a></li>
+                            <li><a href="#">subMenu-2</a></li>
+                            <li><a href="#">subMenu-3</a></li>
+                            <li><a href="#">subMenu-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </nav>
+        <section id="slide">
+            <div class="container">
+                <div class="slide__box">
+                    <p>이미지 슬라이드</p>
+                </div>
+            </div>
+        </section>
+        <section id="banner">
+            <div class="container">
+                <div class="banner__box">
+                    <div class="content1">content1</div>
+                    <div class="content2">content2</div>
+                    <div class="content3">content3</div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container">
+                <div class="footer__box">
+                    <div class="f__logo">f__logo</div>
+                    <div class="f__copy">f__copy</div>
+                    <div class="f__site">f__site</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const Menu = document.querySelectorAll("#nav > ul > li");
+        const subMenu = document.querySelectorAll("#nav > ul > li > ul.submenu");
+
+        Menu.forEach((el, index, array) => {
+            el.addEventListener("mouseover", () => {
+                console.log(el, index);
+
+                subMenu[index].style.display = "block";
+            });
+            el.addEventListener("mouseout", () => {
+                console.log("asd");
+
+                subMenu[index].style.display = "none";
+            });
+        });
+    </script>
+</body>
+</html>

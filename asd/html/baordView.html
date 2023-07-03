@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!-- SCRIPT -->
+    <script defer src="assets/js/common.js"></script>
+    
+</head>
+<body class="gray">
+    
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="../index.html" class="star">
+                    <span class="blind">메인으로</span>
+                </a>
+            </div>
+            <h1 class="logo"><a href="main.html">Developer Blog</a></h1>
+            <div class="right">
+                <ul>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">블로그</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main" class="container">
+        <div class="intro__inner center">
+            <picture class="intro__images small">
+                <source srcset="assets/img/join01.png, assets/img/join01@2x.png 2x, assets/img/join01@3x.png 3x" />
+                <img src="assets/img/join01.png" alt="회원가입 이미지">
+            </picture>
+            <h2>회원 게시판</h2>
+            <p class="intro__text">
+                웹디자이너, 웹퍼블리셔, 프론트엔드 개발자를 위한 게시판입니다.<br>
+                관련된 문의사항은 여기서 확인하세요!
+            </p>
+        </div>
+        <!-- //join__inner-->
+
+        <div class="board__inner">
+            <div class="board__view">
+                <table>
+                    <colgroup>
+                        <col style="width: 20%">
+                        <col style="width: 80%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>제목</th>
+                            <td>게시판 제목입니다.</td>
+                        </tr>
+                        <tr>
+                            <th>등록자</th>
+                            <td>안교남</td>
+                        </tr>
+                        <tr>
+                            <th>등록일</th>
+                            <td>2023-03-03</td>
+                        </tr>
+                        <tr>
+                            <th>조회수</th>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <th>내용</th>
+                            <td>
+                                프론트엔드 개발은 웹 애플리케이션의 사용자 인터페이스(UI)와 사용자 경험(UX)을 개발하는 역할로, 웹 개발 분야에서 중요한 역할을 담당합니다. 프론트엔드 개발자로 취업하기 위해 다음과 같은 노하우를 가지고 있으면 도움이 될 수 있습니다.
+                                웹 기술에 대한 이해: HTML, CSS, JavaScript는 프론트엔드 개발의 기본이 되는 웹 기술입니다. 이들을 잘 이해하고 활용할 수 있는 능력이 필요합니다. 특히, 웹 표준, 웹 접근성, 반응형 웹 디자인 등에 대한 이해가 필요합니다.
+                                프론트엔드 프레임워크/라이브러리 경험: 프론트엔드 개발에는 다양한 프레임워크와 라이브러리가 있습니다. 예를 들어, React, Angular, Vue 등이 대표적인 프론트엔드 프레임워크입니다. 이들을 활용하여 웹 애플리케이션을 개발하는 경험이 있으면 취업에 도움이 될 수 있습니다.
+                                디자인 도구 사용 능력: 프론트엔드 개발자는 사용자 인터페이스(UI)를 개발하는데 있어 디자인 도구를 사용하는 경우가 많습니다. Sketch, Figma, Adobe XD 등의 디자인 도구를 사용할 수 있는 능력이 있다면 유용합니다.
+                                프로젝트 경험: 실제 프로젝트에서의 경험은 매우 중요합니다. 포트폴리오를 통해 자신이 개발한 프로젝트를 보여줄 수 있으면 좋습니다. 실무에서의 프로젝트 경험이 있으면 취업에 큰 도움이 됩니다.
+                                문제 해결 능력: 프론트엔드 개발은 사용자 인터페이스를 개발하며 다양한 문제에 직면할 수 있습니다. 따라서 문제를 독립적으로 해결할 수 있는 능력이 필요합니다. 디버깅, 오류 해결, 웹 호환성 등의 문제를 해결할 수 있는 능력이 중요합니다.
+                                새로운 기술 습득 능력: 웹 개발 분야는 빠르게 변화하고 있기 때문에 새로운 기술과 도구에 대한 학습 능력이 필요합니다. 새로운 프론트
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="board__btn mb100">
+                <a href="#" class="btnStyle3">수정하기</a>
+                <a href="#" class="btnStyle3">삭제하기</a>
+                <a href="/html/board.html" class="btnStyle3">목록보기</a>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="footer__inner btStyle container mb100">
+            <div>Copyright @ 2023 AnGyonam</div>
+            <div>blog by webs</div>
+        </div>
+    </footer>
+</body>
+</html>

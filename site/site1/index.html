@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!-- 언어 설정 -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 브라우저 종류 선택 / 최신 버전의 브라우저만 실행해라. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- viewport은 화면 사이즈에 맞게 자동 조정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 사이트 제목 -->
+    <title>사이트 만들기1</title>
+
+    <!-- SEO -->
+    <!-- 누가 만들었는지 -->
+    <meta name="author" content="안교남">
+    <!-- 사이트 설명 -->
+    <meta name="description" content="안교남의 사이트에 대한 설명^_^">
+    <!-- 사이트의 키워드 -->
+    <meta name="keyword" content="사이트, 따라해보기, 몰라~~">
+    <!-- 로봇이 정보를 가져가라(사이트를 만들면 로봇이 확인함) -->
+    <meta name="robots" content="all">
+    
+    <!-- 내꺼 파비콘 / 180, 192, -->
+    <!-- <link rel="shortcut icon" href="/site/asset/img/icon_plus.svg"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/android-icon-192x192.png">
+    
+    <!-- 네이버 파비콘 -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?1"> -->
+    <link rel="apple-touch-icon" sizes="114x114" href="https://s.pstatic.net/static/www/u/2014/0328/mma_204243574.png">
+    <link rel="apple-touch-icon" href="https://s.pstatic.net/static/www/u/2014/0328/mma_20432863.png">
+    <link rel="shortcut icon" href="/site/site1/assets/ico/ico.png">
+
+    <!-- 다른 사람이 긁어갈때 정보 설정도 가능함. -->
+    <!-- ???? -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+        <header id="headerType" class="hide">
+            <h1 class="blind">사이트 로고</h1>
+    
+            <div class="header__inner">
+                <h1 class="header__log">pizza</h1>
+                <nav class="header__menu">
+                    <ul>
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">훈련방법</a></li>
+                        <li><a href="#">교육방법</a></li>
+                        <li><a href="#">주의할점</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">연락처</a></li>
+                    </ul>
+                </nav>
+                <div class="header__member">
+                    <a href="#">로그인</a>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+        <main id="mainType">
+            <section id="sliderType" class="nexon hide">
+                <h2 class="blind">슬라이드 영역</h2>
+                <figure>
+                    <img src="/assets/img/unsplash_Yn0l7uwBrpw.jpg" alt="슬라이드1">
+                </figure>
+    
+                <div class="slider__inner">
+                    <div class="slider">
+                        <div class="slider__info container">
+    
+                            <span class="small">event</span>
+                            <h3 class="title">야채, 과일, 고기의 좋은 점</h3>
+                            <p class="desc">
+                                영양가가 높다. 야채는 비타민, 미네랄, 식이섬유 등을 다량으로 함유하고 있어서 건강에 좋다.
+                                칼로리가 낮고 포만감을 주기 때문에 다이어트
+                            </p>
+                            <div class="btn">
+                                <a href="#">자세히 보기</a>
+                                <a href="#">상담 신청</a>
+                            </div>
+                        </div>
+                        <div class="slider__arrow">
+                            <!-- 시각장애인(웹표준) : span태그로 글씨를 남김 -->
+                            <a href="#"><span class="blind">이전 이미지</span></a>
+                            <a href="#"><span class="blind">다음 이미지</span></a>
+                        </div>
+                        <div class="slider__dot">
+                            <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
+                            <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
+                            <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                            <a href="#" class="play"><span class="blind">플레이</span></a>
+                            <a href="#" class="stop"><span class="blind">정지</span></a>
+                        </div>
+                    </div>
+            </section> 
+            <!-- //sliderType -->
+    
+            <!-- image.css -->
+            <section id="imageType" class="nexon section center">
+                <h2 class="blind">이미지 영역</h2>
+                <h2 class="section__h2">음식의 종류</h2>
+                <p class="section__desc">음식은 많이 먹으면 물립니다.적당히 먹읍시다</p>
+
+                <div class="container">
+                    <div class="image__inner">
+                        <article class="image">
+                            <figure class="image__header">
+                                <img src="../asset/img/imageType01_01.jpg" alt="채소와 과일은 몸에 좋습니다.">
+                            </figure>
+                            <div class="image__body">
+                                <h3 class="title">채소와 과일은 몸에 좋습니다.</h3>
+                                <p class="desc">채소는 식물의 뿌리, 줄기, 잎, 꽃, 열매 등에서 얻어지는 식품으로, 
+                                    인간의 영양소 섭취에 매우 중요한 역할을 합니다.
+                                </p>
+                                <a href="#" class="btn">자세히 보기</a>
+                            </div>
+                        </article>
+                        <article class="image">
+                            <figure class="image__header">
+                                <img src="../asset/img/imageType01_02.jpg" alt="햄버거는 몸에 좋습니다.">
+                            </figure>
+                            <div class="image__body">
+                                <h3 class="title">햄버거는 몸에 좋습니다.</h3>
+                                <p class="desc">햄버거는 미국의 대표적인 패스트푸드 중 하나로, 주로 패티(고기),
+                                    양상추, 토마토, 양파, 피클 등의 재료를 사이에 넣은
+                                </p>
+                                <a href="#" class="btn">자세히 보기</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section> 
+            <!-- //imageType -->
+            
+            <!-- imageText.css -->
+            <section id="imgTextType" class="nexon section gray card__wrap imgText__inner">
+                <h2 class="blind">이미지/텍스트 영역</h2>
+    
+                <div class="container">
+                    <h2 class="section__h2">피자의 종류</h2>
+                    <p class="section__desc">
+                        피자는 원형 또는 사각형의 모양으로 구운 이태리식 반죽에 토마토 소스와 치즈, 그리고 다양한 토핑을 올린 음식입니다. 
+                        대표적인 토핑으로는 페퍼로니, 양파, 체다치즈, 토마토, 버섯, 올리브, 그리고 소세지 등이 있습니다.
+                    </p>
+                    <div class="card__inner">
+                        <article class="card">
+                            <figure class="card__header">
+                                <img src="../asset/img/cardType1.jpg" alt="콤비네이션 피자">
+                            </figure>
+                            <div class="card__body">
+                                <h3 class="title">피자의 효능</h3>
+                                <p class="desc">다양한 영양소 제공: 피자는 탄수화물, 단백질, 지방, 비민, 미네랄 등의 다양한 영양소를 제공합니다. 이 중에서도 토마토 소스는 비타민 C와 A, 칼슘 등을 함유하고 있으며, 치즈는 단백질과</p>
+                                <a href="#" class="btn">자세히 보기</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <figure class="card__header">
+                                <img src="../asset/img/cardType2.png" alt="불고기 피자">
+                            </figure>
+                            <div class="card__body">
+                                <h3 class="title">빠른 식사</h3>
+                                <p class="desc">빠른 식사: 피자는 빠르게 요리가 되어 빠르게 식사를 할 수 있습니다. 또한 배달이나 픽업 서비스도 있어서 간편하게 주문할 수 있습니다.
+                                    소셜 먹방에 좋음: 피자는 대개 크기가 크기 때문</p>
+                                <a href="#" class="btn">자세히 보기</a>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <figure class="card__header">
+                                <img src="../asset/img/cardType3.png" alt="치즈 피자">
+                            </figure>
+                            <div class="card__body">
+                                <h3 class="title">행사나 모임</h3>
+                                <p class="desc">행사나 모임에 적합: 피자는 파티나 모임에서 적합한 음식 중 하나입니다. 크기가 크기 때문에 많은 사람들에게 나눠 먹을 수 있고, 다양한 토핑을 추가하여 다양한 취향에 맞게 준비할 수 있</p>
+                                <a href="#" class="btn">자세히 보기</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section> 
+            <!-- //imgTextType -->
+    
+
+            <!-- text.css -->
+            <section id="cardType" class="nexon section">
+                <h2 class="blind">카드 영역</h2>
+    
+                <div class="container">
+                    <p class="notice__small">NOTICE</p>
+                    <h2 class="section__h2 mb70">치킨의 종류</h2>
+        
+                    <div class="text__inner">
+                        <div class="text t1">
+                            <h3 class="text__title">후라이드 치킨</h3>
+                            <p class="text__desc">바삭하고 고소한 맛이 좋다는 것: 후라이드 치킨은 바삭하고 고소한 맛이 특징입니다. 특히, 바삭한 피부와 부드러운 고기의 조화로 인해 많은 사람들이 즐기는 음식입니다.</p>
+                            <a href="#" class="text__btn">더보기</a>
+                        </div>
+        
+                        <div class="text t2">
+                            <h3 class="text__title">양념 치킨</h3>
+                            <p class="text__desc">맛있다는 것: 양념 치킨은 매운 맛과 달콤한 맛이 조화로워서 많은 사람들에게 인기가 있습니다. 특히, 매운 맛을 좋아하는 사람들에게는 더욱 좋은 선택이 됩니다.</p>
+                            <a href="#" class="text__btn">더보기</a>
+                        </div>
+                        <div class="text t3">
+                            <h3 class="text__title">간장 치킨</h3>
+                            <p class="text__desc">고소하고 짭쪼름한 맛이 좋다는 것: 간장치킨은 간장과 고추장을 사용하여 고소하고 짭쪼름한 맛을 내는 음식입니다. 이러한 맛은 많은 사람들에게 인기가 있습니다.</p>
+                            <a href="#" class="text__btn">더보기</a>
+                        </div>
+                        <div class="text t4">
+                            <h3 class="text__title">윙봉</h3>
+                            <p class="text__desc">단백질 공급원이라는 것: 윙봉은 치킨 날개와 마찬가지로 단백질을 공급해줍니다. 단백질은 우리 신체에 필요한 영양소 중 하나이며, 건강한 신체를 유지하는 데 중요합니다.</p>
+                            <a href="#" class="text__btn">더보기</a>
+                        </div>
+                        <div class="text t5">
+                            <h3 class="text__title">닭다리만</h3>
+                            <p class="text__desc">비타민 B와 미네랄 공급: 닭다리는 비타민 B와 철, 아연, 인 등의 미네랄이 풍부하게 함유되어 있어 건강한 신체를 유지하는 데 도움을 줍니다.</p>
+                            <a href="#" class="text__btn">더보기</a>
+                        </div>
+                        <div class="text t6">
+                            <h3 class="text__title">날개만</h3>
+                            <p class="text__desc">단백질 공급원이라는 것: 치킨 날개는 단백질을 공급해줍니다. 단백질은 우리 신체에 필요한 영양소 중 하나이며, 건강한 신체를 유지하는 데 중요합니다.</p>
+                            <a href="#" class="text__btn">더보기</a>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+            <!-- //cardType -->
+    
+            <!-- banner2.css -->
+            <section id="bannerType2">
+                <div class="container">
+                    <div class="banner__wrap">
+                        <div class="banner__img">
+                            <figure>
+                                <!-- ./ice.jpg -->
+                                <img src="/site/banner/ice.jpg" alt="배너의 아이스크림 사진">
+                            </figure>
+                        </div>
+                        <div class="banner__desc">
+                            <h3>음식의 종류</h3>
+                            <p>음식에는 여러 종료가 있고.</p>
+                            <p>웹블로그를 통해 더욱 자세히 확인 할 수 있습니다.</p>
+                            <span>https://blog.naver.com/fusgodl/222939983078</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="textType" class="nexon section text2__wrap">
+                <h2 class="blind">텍스트 영역</h2>
+    
+                <div class="container">
+                    <span>NOTICE</span>
+    
+                    <div class="bread__wrap">
+                        <article class="bread__explain">
+                            <h2 class="section__h2">맛있는 빵<br> 다양한 종류</h2>
+                            <p class="bread__turf section__desc">빵은 매우 다양한 종류가 있지만, 여기에 몇 가지 대표적인 빵의 종류를 나열해 보겠습니다.</p>
+                            <ol>
+                                <li>식빵 (White bread): 밀가루, 물, 효모, 설탕 등을 사용하여 만든 기본적인 빵으로, 부드러운 식감과 담백한 맛이 특징입니다.</li>
+                                <li>프렌치 빵 (French bread): 프랑스에서 유래한 빵으로, 밀가루, 물, 효모, 소금을 사용하여 만들며, 바삭한 외피와 쫄깃한 내용물이 특징입니다.</li>
+                                <li>베이글 (Bagel): 유대인 커뮤니티에서 유래한 빵으로, 매우 밀도가 높은 반죽으로 둥글게 만들어져, 끓는 물에 찐 후 오븐에서 구워져서 외피는 딱딱하고, 속은 쫄깃한 맛이 특징입니다.</li>
+                            </ol>
+                        </article>
+                        <article class="img i1">
+                            <h2 class="blind">맛있는 빵</h2>
+                            <!-- /site/site1/assets/img/bread1.jpg -->
+                            <img src="/site/site1/assets/img/bread1.jpg" alt="빵1">
+                        </article>
+                        <article class="img i2">
+                            <h2 class="blind">맛있는 과자</h2>
+                            <img src="/site/site1/assets/img/bread2.jpg" alt="빵2">
+                        </article>
+                    </div>
+                </div>
+            </section> 
+            <!-- //textType -->
+        </main>
+        <!-- //main -->
+        <footer id="footer__wrap">
+            <h2 class="blind">푸터 영역</h2>
+    
+            <div class="container">
+                <h2 class="blind">푸터</h2>
+                
+                <div class="footer__inner">
+                    <div class="footer__menu">
+                        <div>
+                            <h3>음식 소개</h3>
+                            <ul>
+                                <li><a href="#">음식 종류</a></li>
+                                <li><a href="#">음식 재료</a></li>
+                                <li><a href="#">음식 만들기</a></li>
+                                <li><a href="#">음식 추가</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>음식 구매</h3>
+                            <ul>
+                                <li><a href="#">온라인 구매</a></li>
+                                <li><a href="#">오프라인 구매</a></li>
+                                <li><a href="#">밀키트 구매</a></li>
+                            </ul>    
+                        </div>
+                        <div>
+                            <h3>음식 재료</h3>
+                            <ul>
+                                <li><a href="#">판매처</a></li>
+                                <li><a href="#">원산지</a></li>
+                                <li><a href="#">유통 기한</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>인사말</h3>
+                        <ul>
+                            <li><a href="#">CEO</a></li>
+                            <li><a href="#">소개글</a></li>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">추가 소개</a></li>
+                        </ul>
+                        </div>
+                        <div>
+                            <h3>건강식품</h3>
+                            <ul>
+                                <li><a href="#">효능</a></li>
+                                <li><a href="#">면역력</a></li>
+                                <li><a href="#">건강증진</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>고객센터</h3>
+                            <ul>
+                                <li><a href="#">전화 문의</a></li>
+                                <li><a href="#">온라인 문의</a></li>
+                                <li><a href="#">이메일 문의</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <address class="footer__right">
+                        2023 피그마로 만들어본 사이트 Portfollo is Power<br>
+                        All Right Reserved
+                    </address>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+</body>
+</html>

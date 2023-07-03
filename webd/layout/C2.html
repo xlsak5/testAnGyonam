@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title>C2</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+    }
+    #wrap {}
+    .wrap__box {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* left */
+    .left {
+      width: 20%;
+      height: 650px;
+      background-color: #fce6e6;
+    }
+    .left__box {
+    }
+    .left__box {}
+    .left__box h1 {
+      height: 100px;
+      background-color: #b1b1b1;
+      text-align: center;
+      line-height: 100px;
+    }
+    .left__box nav  {
+      padding: 10px;
+    }
+    .left__box nav > ul > {}
+    .left__box nav > ul > li {
+      list-style: none;
+      border: 1px solid #000;
+    }
+    .left__box nav > ul > li > a {
+      display: block;
+      padding: 5px;
+      text-decoration: none;
+      color: #000;
+    }
+    .left__box nav > ul > li:hover > a {
+      background-color: #000;
+      color: #fff;
+    }
+
+    /* submenu */
+    .left__box nav > ul > li > ul {
+      display: none;
+    }
+    .left__box nav > ul > li > ul > li {
+      border: 1px solid #000;
+      list-style: none;
+    }
+    .left__box nav > ul > li > ul > li > a {
+      display: block;
+      padding: 10px;
+      color: #000;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .left__box nav > ul > li > ul > li:hover > a {
+      background-color: #ccc;
+    } 
+
+    /* right */
+    .right {
+      width: 80%;
+      height: 650px;
+      background-color: #ccb6b6;
+    }
+    .right__box {}
+    .right__box #slide {
+      height: 350px;
+      background-color: #d0f8ec;
+    }
+    .right__box #banner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      height: 200px;
+      background-color: #78eaee;
+    }
+    .right__box #banner .banner__contents1 {
+      width: 33.3333%;
+      background-color: #c8d4fa;
+    }
+    .right__box #banner .banner__contents2 {
+      width: 33.3333%;
+      background-color: #89a0eb;
+    }
+    .right__box #banner .banner__contents3 {
+      width: 33.3333%;
+      background-color: #3a53a5;
+    }
+    .right__box #footer {
+      display: flex;
+      height: 100px;
+      background-color: #535151;
+    }
+    .right__box #footer .footer__logo {
+      width: 70%;
+      height: 100px;
+      background-color: #8d5050;
+    }
+    .right__box #footer .footer__banner {
+      width: 30%;
+      background-color: #492929;
+    }
+    .right__box #footer .footer__banner .box1 {
+      height: 50px;
+      background-color: #ebcaf3;
+    }
+    .right__box #footer .footer__banner .box2 {
+      height: 50px;
+      background-color: #a667b6;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="container">
+      <div class="wrap__box">
+        <div class="left">
+          <div class="aa">
+            <div class="left__box">
+              <header id="header">
+                <h1>로고</h1>
+        
+                <nav>
+                  <ul>
+                    <li><a href="#">Menu-1</a>
+                      <ul>
+                        <li><a href="#">SUBMENU-1</a></li>
+                        <li><a href="#">SUBMENU-2</a></li>
+                        <li><a href="#">SUBMENU-3</a></li>
+                        <li><a href="#">SUBMENU-4</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Menu-2</a>
+                      <ul>
+                        <li><a href="#">SUBMENU-1</a></li>
+                        <li><a href="#">SUBMENU-2</a></li>
+                        <li><a href="#">SUBMENU-3</a></li>
+                        <li><a href="#">SUBMENU-4</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Menu-3</a>
+                      <ul>
+                        <li><a href="#">SUBMENU-1</a></li>
+                        <li><a href="#">SUBMENU-2</a></li>
+                        <li><a href="#">SUBMENU-3</a></li>
+                        <li><a href="#">SUBMENU-4</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Menu-4</a>
+                      <ul>
+                        <li><a href="#">SUBMENU-1</a></li>
+                        <li><a href="#">SUBMENU-2</a></li>
+                        <li><a href="#">SUBMENU-3</a></li>
+                        <li><a href="#">SUBMENU-4</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+              </header>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="bb">
+            <div class="right__box">
+              <section id="slide"></section>
+              <section id="banner">
+                <div class="banner__contents1"></div>
+                <div class="banner__contents2"></div>
+                <div class="banner__contents3"></div>
+              </section>
+              <footer id="footer">
+                <div class="footer__logo"></div>
+                <div class="footer__banner">
+                  <div class="box1"></div>
+                  <div class="box2"></div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+  <script>
+    const aTag = document.querySelectorAll(".left__box nav > ul > li");
+    const ulTag = document.querySelectorAll(".left__box nav > ul > li > ul");
+
+    aTag.forEach((el, index, array) => {
+      aTag[index].addEventListener("mouseover", () => {
+        ulTag[index].style.display = "block";
+      });
+      aTag[index].addEventListener("mouseout", () => {
+        ulTag[index].style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>

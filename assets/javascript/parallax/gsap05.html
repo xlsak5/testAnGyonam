@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴랙스 이펙트</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallex.css">
+    <style>
+        #header {
+            position: fixed;
+            z-index: 10000;
+        }
+        .parallaxs__item {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #section1 {background-color: #111;}
+        #section2 {background-color: #222;}
+        #section3 {background-color: #111;}
+        #section4 {background-color: #222;}
+        #section5 {background-color: #111;}
+        #section6 {background-color: #222;}
+        #section7 {background-color: #111;}
+        #section8 {background-color: #222;}
+        #section9 {background-color: #111;}
+        .parallaxs__item__num {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            color: #fff;
+            font-size: 5vw;
+            z-index: 1000;
+            font-family: "Lato";
+            font-weight: 100;
+        }
+        .parallaxs__item__img {
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+            border-radius: 20px;
+            margin: 10px;
+            transition: border-radius 0.3s;
+        }
+        .parallaxs__item__img.active {
+            border-radius: 50%;
+        }
+        .parallaxs__item:nth-child(1) .parallaxs__item__img {
+            background-image: url(img/slider_bg01a.jpg);
+        }
+        .parallaxs__item:nth-child(2) .parallaxs__item__img {
+            background-image: url(img/slider_bg02a.jpg);
+        }
+        .parallaxs__item:nth-child(3) .parallaxs__item__img {
+            background-image: url(img/slider_bg03a.jpg);
+        }
+        .parallaxs__item:nth-child(4) .parallaxs__item__img {
+            background-image: url(img/slider_bg04a.jpg);
+        }
+        .parallaxs__item:nth-child(5) .parallaxs__item__img {
+            background-image: url(img/slider_bg05a.jpg);
+        }
+        .parallaxs__item:nth-child(6) .parallaxs__item__img {
+            background-image: url(img/slider_bg06a.jpg);
+        }
+        .parallaxs__item:nth-child(7) .parallaxs__item__img {
+            background-image: url(img/slider_bg07a.jpg);
+        }
+        .parallaxs__item:nth-child(8) .parallaxs__item__img {
+            background-image: url(img/slider_bg08a.jpg);
+        }
+        .parallaxs__item:nth-child(9) .parallaxs__item__img {
+            background-image: url(img/slider_bg09a.jpg);
+        }
+        .parallaxs__item__text {
+            font-size: 10vw;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="img01 bg01 font01">
+    <header id="header">
+        <h1>GSAP Parallax Effect05</h1>
+        <p>GSAP 패럴랙스 이펙트 : PIN 애니메이션</p>
+        <ul>
+            <li><a href="gsap01.html">1</a></li>
+            <li><a href="gsap02.html">2</a></li>
+            <li><a href="gsap03.html">3</a></li>
+            <li><a href="gsap04.html">4</a></li>
+            <li class="active"><a href="gsap05.html">5</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="parallaxs__wrap">
+            <section id="section1" class="parallaxs__item">
+                <span class="parallaxs__item__num">01</span>
+                <div class="parallaxs__item__img"></div>
+            </section>
+            <!-- //section1 -->
+
+            <section id="section2" class="parallaxs__item">
+                <span class="parallaxs__item__num">02</span>
+                <div class="parallaxs__item__text">section2</div>
+                <!-- <div class="parallaxs__item__img"></div> -->
+            </section>
+            <!-- //section2 -->
+
+            <section id="section3" class="parallaxs__item">
+                <span class="parallaxs__item__num">03</span>
+                <div class="parallaxs__item__img i1"></div>
+                <div class="parallaxs__item__img i2"></div>
+                <div class="parallaxs__item__img i3"></div>
+            </section>
+            <!-- //section3 -->
+
+            <section id="section4" class="parallaxs__item">
+                <span class="parallaxs__item__num">04</span>
+                <div class="parallaxs__item__img i1"></div>
+                <div class="parallaxs__item__img i2"></div>
+                <div class="parallaxs__item__img i3"></div>
+                <div class="parallaxs__item__img i4"></div>
+            </section>
+            <!-- //section4 -->
+
+            <section id="section5" class="parallaxs__item">
+                <span class="parallaxs__item__num">05</span>
+                <div class="parallaxs__item__img"></div>
+            </section>
+            <!-- //section5 -->
+
+            <section id="section6" class="parallaxs__item">
+                <span class="parallaxs__item__num">06</span>
+                <div class="parallaxs__item__img"></div>
+            </section>
+            <!-- //section6 -->
+
+            <section id="section7" class="parallaxs__item">
+                <span class="parallaxs__item__num">07</span>
+                <div class="parallaxs__item__img"></div>
+            </section>
+            <!-- //section7 -->
+
+            <section id="section8" class="parallaxs__item">
+                <span class="parallaxs__item__num">08</span>
+                <div class="parallaxs__item__img"></div>
+            </section>
+            <!-- //section8 -->
+
+            <section id="section9" class="parallaxs__item">
+                <span class="parallaxs__item__num">09</span>
+                <div class="parallaxs__item__img"></div>
+            </section>
+            <!-- //section9 --> 
+        </div>
+    </main>
+    <!-- //main -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script>
+        const box1 = document.querySelector("#section1 .parallaxs__item__img");
+        const box2 = document.querySelector("#section2 .parallaxs__item__text");
+        const box3 = document.querySelector("#section3 .parallaxs__item__img");
+        const box4 = document.querySelector("#section4 .parallaxs__item__img");
+        const box5 = document.querySelector("#section5 .parallaxs__item__img");
+        const box6 = document.querySelector("#section6 .parallaxs__item__img");
+        const box7 = document.querySelector("#section7 .parallaxs__item__img");
+        const box8 = document.querySelector("#section8 .parallaxs__item__img");
+        const box9 = document.querySelector("#section9 .parallaxs__item__img");
+        const box10 = document.querySelector("#section10 .parallaxs__item__img");
+         gsap.defaults({
+            ease: "none",
+            duration: 2
+         });
+
+         //  기존에 하던 방법
+         //  gsap.to("#section1 .parallaxs__item__img", {
+         //     duration: 2,
+         //     rotation: 720,
+         //     scale: 0.1,
+         //     scrollTrigger: {
+         //         trigger: "#section1",
+         //         scrub: true,
+         //     }
+         //  });
+         
+
+        //  #section1
+        //  좀더 길게 해줄거면 밑에 end값을 늘려주면 됨
+         const ani1 = gsap.timeline();
+         ani1.to(box1, {
+            rotation: 720,
+            scale: 0.1,
+            borderRadius: 200,
+         }).to(box1, {
+            rotation: 0,
+            scale: 1,
+            borderRadius: 20
+         });
+
+         ScrollTrigger.create({
+            animation: ani1,
+            trigger: "#section1",
+            start: "top top",
+            // +=2000을 붙여 써야 함.
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            actionipatePin: 1,
+            markers: true,
+         });
+
+        // #section2
+        const ani2 = gsap.timeline();
+        ani2.to(box2, {scale:30, rotation: 700, duration: 2})
+        .to(box2, {scale:1, rotation: 0});
+
+         ScrollTrigger.create({
+            animation: ani2,
+            trigger: "#section2",
+            start: "top top",
+            // +=2000을 붙여 써야 함.
+            end: "+=4000",
+            scrub: true,
+            pin: true,
+            actionipatePin: 1,
+            markers: false,
+         });
+
+         // #section3
+        const ani3 = gsap.timeline();
+        ani3.from("#section3 .parallaxs__item__img.i1", { y: -200, duration: 1}, "a")
+        .from("#section3 .parallaxs__item__img.i2", {y: 200, duration: 1}, "a")
+        .from("#section3 .parallaxs__item__img.i3", {y: -200, duration: 1}, "a");
+
+         ScrollTrigger.create({
+            animation: ani3,
+            trigger: "#section3",
+            start: "top top",
+            // +=2000을 붙여 써야 함.
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            actionipatePin: 1,
+            markers: false,
+         });
+
+          // #section4 / (수업)
+        // const ani4 = gsap.timeline();
+        // ani4.fromTo("#section4 .parallaxs__item__img", 
+        //         {y: -200, autoAlpha:0},
+        //         {y: 0, autoAlpha:0});
+
+        //  ScrollTrigger.create({
+        //     animation: ani4,
+        //     trigger: "#section3",
+        //     start: "top top",
+        //     // +=2000을 붙여 써야 함.
+        //     end: "+=2000",
+        //     scrub: true,
+        //     pin: true,
+        //     actionipatePin: 1,
+        //     markers: true,
+        //  });
+
+        // #section4 / (나)
+        const ani4 = gsap.timeline();
+        ani4.from("#section4 .parallaxs__item__img.i1", {y: 200, x: 100, duration: 1}, "a")
+        .from("#section4 .parallaxs__item__img.i2", {y: 200, rotation: 360, duration: 1}, "a")
+        .from("#section4 .parallaxs__item__img.i3", {y: -200, rotation: 360, duration: 1}, "a")
+        .from("#section4 .parallaxs__item__img.i4", {y: -200, x: -100, duration: 1}, "a");
+
+        ScrollTrigger.create({
+            animation: ani4,
+            trigger: "#section4",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true
+        })
+
+        // #section5
+        const ani5 = gsap.timeline();
+        ani5.to("#section5 .parallaxs__item__img", 
+        {
+            scale: 10, 
+            rotation: 700,
+            opacity: 0, 
+            duration: 2
+        }).to("#section5 .parallaxs__item__img", {
+            scale: 1, 
+            rotation: 0,
+            opacity: 1, 
+            x:0,
+        });
+
+        ScrollTrigger.create({
+            animation: ani5,
+            trigger: "#section5",
+            start: "top top",
+            end: "+=4000",
+            scrub: true,
+            pin: true
+        });
+
+        // #section6
+        const ani6 = gsap.timeline();
+        ani6.to("#section6 .parallaxs__item__img", {
+            rotation: 720,
+            scale: 0.1,
+            borderRadius: 200,
+            x: 0,
+         }).to("#section6 .parallaxs__item__img", {
+            rotation: 0,
+            scale: 1,
+            borderRadius: 20,
+            x: 700,
+         });
+
+         ScrollTrigger.create({
+            animation: ani6,
+            trigger: "#section6",
+            start: "top top",
+            // +=2000을 붙여 써야 함.
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            actionipatePin: 1,
+            markers: false,
+         });
+
+        // #section7
+        const ani7 = gsap.timeline();
+        ani7.to("#section7 .parallaxs__item__img", {
+            rotation: 720,
+            scale: 0.1,
+            borderRadius: 200,
+            x: 0,
+            opacity: 0,
+         }).to("#section7 .parallaxs__item__img", {
+            rotation: 0,
+            scale: 1,
+            borderRadius: 20,
+            x: 700,
+            opacity: 1,
+         });
+
+         ScrollTrigger.create({
+            animation: ani7,
+            trigger: "#section7",
+            start: "top top",
+            // +=2000을 붙여 써야 함.
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            actionipatePin: 1,
+            markers: false,
+         });
+
+        // #section8
+        const ani8 = gsap.timeline();
+        ani8.from("#section8 .parallaxs__item__img", { y: -200, duration: 1, rotation: 360, opacity:0, borderRadius: 200}, "a");
+
+         ScrollTrigger.create({
+            animation: ani8,
+            trigger: "#section8",
+            start: "top top",
+            // +=2000을 붙여 써야 함.
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            actionipatePin: 1,
+            markers: false,
+         });
+
+         // #section9
+        const ani9 = gsap.timeline();
+        ani9.from("#section9 .parallaxs__item__img", 
+        {
+             y: -200, 
+            duration: 1, 
+            rotation: 360, 
+            opacity:0, 
+            borderRadius: 200,
+            scale: 10,
+        }, "a");
+
+         ScrollTrigger.create({
+            animation: ani9,
+            trigger: "#section9",
+            start: "top top",
+            // +=2000을 붙여 써야 함.
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            actionipatePin: 1,
+            markers: false,
+         });
+    </script>
+</body>
+</html>

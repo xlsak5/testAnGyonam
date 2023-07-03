@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* aside */
+        #aside {
+            width: 200px;
+            height: 850px;
+            background-color: #ccc;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: #745e5e33;
+        }
+        #aside nav {
+            width: 100%;
+            height: 750px;
+            background-color: #7c6565;
+        }
+
+        /* main */
+        #main {
+            /* calc는 빼기를 띄어줘야 함 */
+            width: calc(100% - 200px);
+            height: 850px;
+            background-color: #444;
+        }
+        
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #ffadad;
+            position: relative;
+        }
+        #slider nav {
+            width: 102%;
+            position: absolute;
+            right: 0;
+            top: 176px;
+        }
+        #slider nav ul {
+            border: 1px solid #000;
+            background-color: #ccc;
+            padding: 20px;
+        }
+        #slider nav ul li {
+            list-style: none;
+        }
+        #slider .link {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 300px;
+            background-color: blue;
+        }
+
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: rgb(82, 62, 62);
+        }
+
+        #contents {
+            width: 100%;
+            height: 250px;
+            background-color: #250101;
+        }
+
+        /* footer */
+        #footer {
+            display: flex;
+        }
+        #footer .footer1 {
+            width: 200px;
+            height: 100px;
+            background-color: #bdf0e3;
+        }
+        #footer .footer2 {
+            width: 800px;
+            height: 100px;
+            background-color: #5bc7ac;
+        }
+        #footer .footer3 {
+            width: 200px;
+            height: 100px;
+            background-color: #147a61;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap" class="container">
+        <aside id="aside">
+            <h1></h1>
+            <nav></nav>
+        </aside>
+        <main id="main">
+            <section id="slider">
+                <div class="link"></div>
+
+                <nav>
+                    <ul>
+                        <li>서브메뉴1</li>
+                        <li>서브메뉴2</li>
+                        <li>서브메뉴3</li>
+                        <li>서브메뉴4</li>
+                    </ul>
+                </nav>
+            </section>
+            <section id="banner"></section>
+            <section id="contents"></section>
+        </main>
+        <footer id="footer">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </footer>
+    </div>    
+</body>
+</html>

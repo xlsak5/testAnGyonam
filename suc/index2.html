@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>명언 랜덤으로</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .container {
+      width: 1280px;
+      margin: 0 auto;
+    }
+    div {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      /* left: 20%;
+      top: 30%; */
+      color: #faf8f9;
+      z-index: 9999;
+    }
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: left;
+    }
+    h1 {
+      padding: 20px 0 30px;
+    }
+    img { 
+      width: 1280px;
+      position: absolute;
+      left:0;
+      top:0;
+      z-index: -1;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div>
+      <img src="./img/slider_bg01a.jpg"/>
+      <p>10초만 기달려주세요</p>
+      <h1 id="result"></h1>
+      <h2 class="quote"></h2>
+    </div>
+  </div>
+
+  <script>
+    let Array = [];
+    let number = -1;
+    let plus = 0;
+
+    fetch("./dummy01.json")
+    .then(name => name.json())
+    .then((result) => {
+      
+      let Result = document.querySelector("#result");
+      let Quote = document.querySelector(".quote");
+      let What = document.querySelector("p");
+      let Img = document.querySelector("img");
+
+      
+      setInterval(() => {
+        number = Math.floor(Math.random() * 30);
+        
+        Result.innerHTML = result.quotes[number].quote;
+        Quote.innerHTML = result.quotes[number].author;
+        What.innerHTML = number + "번지";
+        
+
+        ++plus;
+
+        Img.src = `./img/slider_bg0${plus}a.jpg`;
+        if(plus === 9){
+          plus = 0;
+        }
+        // Img.src = `slider_bg01a.jpg`;
+      }, 10000);
+    });
+  </script>  
+</body>
+</html>

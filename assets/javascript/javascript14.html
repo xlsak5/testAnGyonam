@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript : 퀴즈 효과</title>
+
+    <link rel="stylesheet" href="./assets/reset.css">
+
+    <link rel="shortcut icon" href="../ico/javascript.ico">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../ico/javascript192x192.png">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="last">
+                <li><a href="javascript12.html">데이터 효과</a></li>
+                <li><a href="javascript13.html">검색 효과</a></li>
+                <li class="active"><a href="javascript14.html">퀴즈 효과</a></li>
+                <li><a href="javascript15.html">마우스 효과</a></li>
+                <li><a href="javascript16.html">슬라이드 효과</a></li>
+                <li><a href="javascript17.html">패럴렉스</a></li>
+                <li><a href="javascript18.html">게임 객체</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="container">
+            <div class="main__menu"> 
+                <div class="main__desc">
+                    <h3>01. 퀴즈 이펙트 : 정답 확인하기 유형</h3>
+                    <p>정답 확인 버튼을 누르면 정답이 나오는 유형입니다.</p>
+                    <ul>
+                        <li>데이터 저장하기 : 변수</li>
+                        <!-- 속성은 괄호 없음 / 메서드는 괄호 있음 -->
+                        <li>요소 객체 : 메서드 : querySelector() : 문서에서 특정 CSS 선택자로 요소를 찾는 DOM 메서드입니다.</li>
+                        <li>요소 객체 : 메서드 : innerText : DOM 요소의 텍스트 내용을 가져오거나 설정하는 데 사용되는 속성입니다.</li>
+                        <li>요소 객체 : 메서드 : classList는 요소의 클래스를 추가하거나 제거하여 스타일을 설정하는데 사용됩니다.</li>
+                        <li>이벤트 객체 : 메서드 : addEventListener : JavaScript에서 이벤트를 처리하는 함수입니다.</li>
+                        <li>element.style.속성 = "속성값" : 자바스크립트에서 CSS스타일을 표현하는 방법입니다.</li>
+                        <li>addEventListener : JavaScript에서 이벤트를 처리하는 함수입니다.</li>
+                    </ul>
+                    <a href="./quiz/quizEffect01.html">확인하기</a>
+                </div>
+
+                <div class="main__desc">
+                    <h3>02. 퀴즈 이펙트 : 주관식 확인하기 유형</h3>
+                    <p>답을 입력 시 정답을 확인을 해주는 유형입니다.</p>
+                    <ul>
+                        <li>데이터 저장하기 : 변수</li>
+                        <li>데이터 제어하기 : if문</li>
+                        <!-- 속성이라 ()있고. 메서드라 ()없고 -->
+                        <li>배열 객체 : trim() : 여백 제거입니다.(text로 확인할때 여백이 있으면 에러가 납니다. 그떄 trim을 쓰면 여백이 있어도 여백을 없애줍니다.)</li>
+                        <li>textContent :  HTML요소의 텍스트 내용을 설정하거나 반환하는 자바스크립트 프로퍼티입니다.</li>
+                        <li>value : form 요소의 값을 설정하거나 반환하는 자바스크립트 프로퍼티입니다.</li>
+                    </ul>
+                    <a href="./quiz/quizEffect02.html">확인하기</a>
+                </div>
+
+                <div class="main__desc">
+                    <h3>03. 퀴즈 이펙트 : 주관식 확인하기(여러문제) 확인하기 유형</h3>
+                    <p>답을 입력 시 정답을 확인을 해주는 유형입니다.</p>
+                    <ul>
+                        <li>데이터 저장하기 : 배열, 객체</li>
+                        <li>데이터 불러오기 : for문, forEach문</li>
+                        <li>데이터 제어하기 : if문</li>
+                        <li>요소 객체 : 메서드 : querySelectorAll() : DOM에서 특정 선택자를 사용하여 웹페이지의 요소를 찾는 JavaScript메소드입니다.</li>
+                        <li>요소 객체 : 메서드 : innerHTML() : DOM 요소의 내부 HTML 콘텐츠를 나타내는 JavaScript 프로퍼티 입니다.</li>
+                    </ul>
+                    <a href="./quiz/quizEffect03.html">확인하기</a>
+                </div>
+
+                <div class="main__desc">
+                    <h3>04. 퀴즈 이팩트 : 객관식 확인하기 유형</h3>
+                    <p>객관식을 선택하면 정답을 확인하는 유형입니다.</p>
+                    <ul>
+                        <li>데이터 저장하기 : 배열, 객체</li>
+                        <li>데이터 불러오기 : 배열, 객체, for문, forEach()</li>
+                        <li>데이터 실행하기 : 함수</li>
+                        <li>데이터 젱하기 : if문, 다중if문</li>
+                    </ul>
+                    <a href="./quiz/quizEffect04.html">확인하기</a>
+                </div>
+
+                <div class="main__desc">
+                    <h3>05. 퀴즈 이팩트 : 객관식 확인하기(여러문제) 유형</h3>
+                    <p>객관식을 선택하면 정답을 확인하는 유형입니다.</p>
+                    <ul>
+                        <li>데이터 저장하기 : 배열, 객체</li>
+                        <li>데이터 불러오기 : 배열, 객체, for문, forEach()</li>
+                        <li>데이터 실행하기 : 함수, 익명함수, 화살표 함수</li>
+                        <li>데이터 제어하기 : if문, 다중if문</li>
+                        <li>배열 객체 : push(), join()</li>
+                        <li>배열 객체 : Math.ceil() : 오름차순, Math.floor() : 내림차순</li>
+                    </ul>
+                    <a href="./quiz/quizEffect05.html">확인하기</a>
+                </div>
+
+                <div class="main__desc">
+                    <h3>06. 퀴즈 이펙트 : 객관식 확인하기(여러문제) 유형</h3>
+                    <p>객관식을 선택하면 정답을 확인하는 유형이고 슬라이드 형식으로 확인합니다.</p>
+                    <ul>
+                        <li>데이터 저장하기 : 배열, 객체</li>
+                        <li>데이터 불러오기 : 배열, 객체, for문, forEach()</li>
+                        <li>데이터 실행하기 : 함수, 익명함수, 화살표함수</li>
+                        <li>데이터 제어하기 : if문<li>
+                        <li>수학 객체 : Math.ceil()</li>
+                    </ul>
+                    <a href="./quiz/quizEffect06.html">확인하기</a>
+                </div>
+
+                <div class="main__desc">
+                    <h3>07. 퀴즈 이팩트 : CBT 유형</h3>
+                    <p>객관식을 선택하는 시험 유형</p>
+                    <ul>
+                        <li>데이터 저장하기 : json, 배열, 객체</li>
+                        <li>데이터 불러오기 : fetch(), map(), forEach(), hasOwnProperty()</li>
+                        <li>데이터 실행하기 : 함수, 익명함수, 화살표함수, 리턴함수, setInterval()</li>
+                        <li>데이터 제어하기 : if문<li>
+                        <li>배열 객체 : push(), join()</li>
+                        <li>수학 객체 : Math.ceil(), Math.random()</li>
+                    </ul>
+                    <a href="./quiz/quizEffect07.html">확인하기</a>
+                </div>
+            </div>
+        </div>         
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:skadldldl123@gmail.com">mailto:skadldldl123@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>

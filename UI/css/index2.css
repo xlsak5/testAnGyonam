@@ -1,0 +1,288 @@
+/* 공통 */
+.wrap {}
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+.container {
+  /* width: 1920px; */
+  /* width: 1280px; */
+  width: 100%;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+.flex2 {
+  display: flex;
+}
+.flex3 {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+/* #post  공통*/
+#post {
+  padding: 90px 0 0;
+}
+#post h2 {
+  margin-bottom: 45px;
+}
+.post__wrap1 {
+  width: 22%;
+}
+.post__wrap2 {
+  width: 33.3333%;
+}
+.post__wrap3 {
+  width: 22%;
+}
+.p1_title {
+  width: 100%;
+  background-image: url(/UI/img/pp1/p1_title.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+}
+.p1 {
+  width: 110px;
+  background-image: url(/UI/img/pp1/p1.png);
+}
+.p1-1 {
+  width: 1110px;
+  background-image: url(/UI/img/pp1/p1-1.png);
+}
+
+/* post1 */
+.post1__box1 {
+  width: 25%;
+}
+.post1__box1 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box1 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post2 */
+.post1__box2 {
+  width: 25%;
+}
+.post1__box2 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box2 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post3 */
+.post1__box3 {
+  width: 25%;
+}
+.post1__box3 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box3 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post4 */
+.post1__box4 {
+  width: 25%;
+}
+.post1__box4 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box4 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post5 */
+.post1__box5 {
+  width: 25%;
+}
+.post1__box5 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box5 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post6 */
+.post1__box6 {
+  width: 25%;
+}
+.post1__box6 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box6 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post7 */
+.post1__box7 {
+  width: 25%;
+}
+.post1__box7 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box7 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post8 */
+.post1__box8 {
+  width: 25%;
+}
+.post1__box8 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box8 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post9 */
+.post1__box9 {
+  width: 25%;
+}
+.post1__box9 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box9 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post10 */
+.post1__box10 {
+  width: 25%;
+}
+.post1__box10 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box10 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+/* post11 */
+.post1__box11 {
+  width: 25%;
+}
+.post1__box11 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box11 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+
+/* post12 */
+.post1__box12 {
+  width: 30%; 
+}
+.post1__box12 .a {
+  /* display: flex;
+  justify-content: space-around; */
+}
+.post1__box12 .left__box12 {}
+.post1__box12 .right__box12 {}
+.post1__box12 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box12 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+
+/* post13 */
+.post1__box13 {
+  width: 25%;
+}
+.post1__box13 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box13 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+
+/* post14 */
+.post1__box14 {
+  width: 25%;
+}
+.post1__box14 p {
+  position: relative;
+  background-repeat: no-repeat;
+  height: 60px;
+}
+.post1__box14 span {
+  position: absolute;
+  left: 25px;
+  top: 18px;
+}
+
+
+@media (max-width: 1700px) {
+  .post__wrap3 {
+    width: 100%;
+  }
+}
+
+
+
+
+

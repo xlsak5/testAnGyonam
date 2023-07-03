@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>몰라~</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="./sample.css">
+</head>
+
+<body>
+  <h1>로또 번호 생성기</h1>
+  <div>
+    <a href="#">클릭</a>
+  </div>
+  <h2></h2>
+
+  <script>
+    const tag = document.querySelector("a");
+    const H2 = document.querySelector("h2");
+
+    let number = [];
+    let number2 = [];
+
+    tag.addEventListener("click", () => {
+      // 여기까지는 중복이 포함되는 형태입니다.
+      // 실력이 후달려서 중복 제거는 구글링을 하겠습니다.
+      for(let i=1; i<=6; i++){
+        number[i] = Math.floor((Math.random() * 46)+1);
+
+      }
+      // 중복 제거하기 (구글링을 했네요.실력이 부족해요.~_~)
+      // Set 객체에 데이터 삽입 및 중복제거(객체 형태로 만듬)
+      let set = new Set(number);
+      // 객체를 배열 형태로 만듬
+      let overlap = Array.from(set);
+      let aa = Math.floor((Math.random() * 46)+1);
+      let aa2 = Math.floor((Math.random() * 46)+1);
+      let ac = [...overlap, aa];
+      let ac2 = [...overlap, aa, aa2];
+      H2.innerHTML = overlap.join(" ");
+      console.log(ac);
+
+      if(overlap.length === 6){
+        // overlap.push(Math.floor(Math.random() * 46));
+        H2.innerHTML = ac.join(" ");
+      }
+      else if(overlap.length === 5){
+        H2.innerHTML = ac2.join(" ");
+      }
+      console.log(overlap.length);
+    });
+    
+   
+  </script>
+</body>
+</html>

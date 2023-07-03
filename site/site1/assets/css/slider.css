@@ -1,0 +1,132 @@
+/* slider__wrap */
+/* 이미지 최적화 - https://imagecompressor.com/ko/ - 파일 업로드 후 다운로드(80%까지 최적화 해줌)*/
+.slider__wrap {
+    padding: 120px 0;
+}
+.slider__inner {}
+.slider__inner .slider {
+    height: 600px;
+    /* /asset/img/unsplash_Yn0l7uwBrpw@2x-min.jpg */
+    background-image: url(/assets/img/unsplash_Yn0l7uwBrpw.jpg);
+    /* cover : width값을 기준으로 꽉채움 */
+    /* 피그마 Export에서 1x는 일반 피시
+    래트나(핸드폰) 2x */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+.slider__inner .slider::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.slider__info {
+    padding: 100px 0;
+}
+.slider__info .small {
+    display: inline-block;
+    padding: 1px 30px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.slider__info .title {
+    font-size: 80px;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-left: -2px;
+}
+.slider__info .desc {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    width: 50%;
+    word-break: keep-all;
+}
+.slider__info .btn {
+    margin-top: 100px;
+}
+.slider__info .btn a {
+    display: inline-block;
+    width: 180px;
+    background-color: #fff;
+    text-align: center;
+        /* 정확히 height값 줄거면 height값 주고 line-height 주면 똑같아짐.  */
+    padding: 12px;
+    margin-right: 4px;
+}
+.slider__info .btn a:last-child {
+    background-color: #000;
+    color: #fff;
+}
+.slider__arrow {
+
+}
+.slider__arrow a {
+    position: absolute;
+    top: 50%;
+    background-image: url(../asset/img/icon_main.png);
+    background-size: 500px;
+    width: 30px;
+    height: 56px;
+    display: block;
+    margin-top: -28px;
+}
+.slider__arrow a:first-child {
+    left: 20px;
+}
+.slider__arrow a:last-child {
+    right: 20px; 
+    background-position: -46px 0;
+}
+.slider__dot {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
+.slider__dot a {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url(../asset/img/icon_main.png);
+    background-size: 500px;
+}
+.slider__dot a.dot {
+    background-position: -104px -1px;
+}
+.slider__dot a.active {
+    background-position: -83px -1px;
+}
+.slider__dot a.play {
+    background-position: -147px -1px;
+}
+.slider__dot a.stop {
+    background-position: -163px -1px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 2dppx) {
+        .slider__inner .slider {
+            background-image: url(/assets/img/unsplash_Yn0l7uwBrpw.jpg);      
+        }
+    }
+
+/* 미디어쿼리 */
+@media (max-width: 960px){
+
+}
+@media (max-width: 600px){
+
+}

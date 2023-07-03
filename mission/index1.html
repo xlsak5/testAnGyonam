@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스가 들어오면 이미지가 바뀌네요</title>
+
+    <style>
+        .img1 {
+            /* display: none; */
+            width: 500px;
+            height: 500px;
+            background-image: url("./img/img1.jpg");
+        }
+        /* .img1:hover {
+            width: 100%;
+            height: 500px;
+            background-image: url("./img/img2.jpg");
+            background-size: cover;
+        } */
+        .img2 {
+            display: none;
+            width: 500px;
+            height: 500px;
+            background-image: url("./img/img2.jpg");
+        }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <div class="img1"></div>
+        <div class="img2"></div>
+    </div>
+
+    <script>
+        const Img = document.querySelector(".img");
+        const Img1h = Img.querySelector(".img1");
+        const Img2h = Img.querySelector(".img2");
+
+        Img1h.addEventListener("mouseover", function(){
+            console.log("asd");
+            Img1h.style.display = "none";
+            Img2h.style.display = "block";
+        });
+        Img2h.addEventListener("mouseout", function(){
+            Img1h.style.display = "block";
+            Img2h.style.display = "none";
+        });
+    </script>
+</body>
+</html>

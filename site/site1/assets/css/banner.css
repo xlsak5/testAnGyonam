@@ -1,0 +1,48 @@
+/* image__wrap */
+#bannerType {
+    /* background-color: rgba(0,0,0,0.1); */
+    padding: 120px 0;
+}
+.image__inner {
+    display: flex;
+    /* 
+        flex-start (기본값)	시작쪽으로 정렬(왼쪽 -> 오른쪽)
+        flex-end	끝쪽으로 정렬(우측으로 이동 후, 왼쪽->오른쪽 정렬)
+        center	중앙으로 정렬(가운데로 이동 후, 왼쪽->오른쪽 정렬)
+        space-between	양쪽 정렬
+        space-around	요소 좌우 동일 간격
+    */
+    justify-content: space-between;
+}
+/* image__type */
+.image__inner .image {
+    width: 570px;
+    height: 370px;
+    /* background-color: #ccc; */
+    position: relative;
+}
+.image__header {
+}
+.image__body {
+    position: absolute;
+    left: 0;
+    bottom:0;
+    color: #fff;
+    text-align: left;
+    padding: 30px;
+}
+.image__body .title {
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+.image__body .desc {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding-right: 20%;
+}
+.image__body .btn {
+    display: inline-block;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5); 
+    padding: 10px 30px;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>샘플3</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style3.css">
+
+    <!-- JS -->
+</head>
+
+<body>
+    <header id="header">
+        <div class="header__wrap">
+            <div class="container">
+                <h1>~로고~</h1>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <section id="section">
+        <div class="section__wrap">
+            <div class="container flex">
+                <div class="quez__wrap">
+                    <div class="question__wrap">
+                        <div class="kind">
+                            <span></span>
+                        </div>
+                        <div class="content">
+                            <span></span>
+                        </div>
+                        <div class="true">
+                            <input type="text" class="enter" placeholder="정답을 적어주세요~!"/>
+                            <button class="btn">정답 확인하기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quez__wrap">
+                    <div class="question__wrap">
+                        <div class="kind">
+                            <span></span>
+                        </div>
+                        <div class="content">
+                            <span></span>
+                        </div>
+                        <div class="true">
+                            <input type="text" class="enter" placeholder="정답을 적어주세요~!"/>
+                            <button class="btn">정답 확인하기</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quez__wrap">
+                    <div class="question__wrap">
+                        <div class="kind">
+                            <span></span>
+                        </div>
+                        <div class="content">
+                            <span></span>
+                        </div>
+                        <div class="true">
+                            <input type="text" class="enter" placeholder="정답을 적어주세요~!"/>
+                            <button class="btn">정답 확인하기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //section -->
+    <footer id="footer">
+        <div class="footer__wrap">
+            <div class="container">
+                <address>
+                    <a href="#">mail: skadldldl123@gmail.com</a>
+                </address>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        const Section = document.querySelector("#section");
+        // 시험 종류 / 시험 회차
+        const sKind = Section.querySelector(".kind");
+        const sKinds = Section.querySelectorAll(".kind span");
+        // const sKinde = Section.querySelector(".kind em");
+
+        // 문제 번호 / 문제 내용
+        const Content = Section. querySelector(".content");
+        const Contents = Section. querySelectorAll(".content span");
+        // const Contente = Section. querySelector(".content em");
+
+        // 문제 입력 / "정답/오답" 버튼
+        const True = Section.querySelector(".true");
+        const trueEnter = Section.querySelectorAll(".true .enter");
+        const trueBtn = Section.querySelectorAll(".true .btn");
+
+        const content = [
+            {
+                kind: "웹디자인기능사",
+                year: "2012년 0회",
+                number: "1",
+                content: "주파수분할 다중화 방식에서 각 채널간 간섭을 막기 위해서 일종의 완충지역 역할을 하는 것은?",
+                answer: "가드밴드"
+            },
+            {
+                kind: "웹디자인기능사",
+                year: "2012년 1회",
+                number: "2",
+                content: "주파수분할 다중화 방식에서 각 채널간 간섭을 막기 위해서 일종의 완충지역 역할을 하는 것은?",
+                answer: "가드밴드2"
+            },
+            {
+                kind: "웹디자인기능사",
+                year: "2012년 2회",
+                number: "3",
+                content: "주파수분할 다중화 방식에서 각 채널간 간섭을 막기 위해서 일종의 완충지역 역할을 하는 것은?",
+                answer: "가드밴드3"
+            }
+        ];
+
+        content.forEach(function(el, index){
+            sKinds[index].innerHTML = content[index].kind + " " + content[index].year;
+            Contents[index].innerHTML = content[index].number + "." + content[index].content;
+            // trueEnter[index].innerHTML = content[index].answer;
+            
+            trueBtn[index].addEventListener("click", function(){
+                if(trueEnter[index].value === content[index].answer){
+                    trueBtn[index].classList.add("dis");
+                    console.log("정답");
+                }
+                else{
+                    console.log("오답");
+                }   
+            })
+        });
+
+        // 1개만 있을때
+        // content.forEach(function(e){
+        //     sKinds.innerHTML = e.kind + " " + e.year;
+        //     Contents.innerHTML = e.number + ". " + e.content;
+
+        //     trueBtn.addEventListener("click", function(){
+        //         if(trueEnter.value.trim() === e.answer){
+        //             alert("정답~");
+        //             trueBtn.classList.add("dis");
+        //         }
+        //         else{
+        //             alert(";;");
+        //         }
+        //     });
+        // });
+    </script>
+</body>
+</html>

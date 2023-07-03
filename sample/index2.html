@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배운거 복습하기2</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/sample/css/style2.css">
+
+    <!-- JS -->
+</head>
+<body>
+    <header id="header">
+        <div class="header__wrap">
+            <div class="container">
+                <h2>로고~</h2>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+    <section id="section">
+        <div class="section__wrap">
+            <div class="container flex">
+                <div class="section__box">
+                    <div class="box__wrap">
+                        <div class="c__turning">
+                            <span></span> <em></em>
+                        </div>
+                        <div class="c__number">
+                            <span></span>. <em></em>
+                        </div>
+                        <div class="c__question">
+                            <input type="text" class="c__text" placeholder="정답을 적어주세요!" />
+                            <button class="btn">정답 확인하기</button>
+                        </div>
+                        <div class="c__content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //section -->
+    <footer id="footer">
+        <div class="footer__wrap">
+            <div class="container">
+                <address>
+                    <a href="#">mail: skadldldl123@gmail.com</a>
+                </address>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        // section 전체
+        const Section = document.querySelector("#section");
+        // 문제 종류 / 문제 년도
+        const cTurnings = Section.querySelector(".c__turning span");
+        const cTurninge = Section.querySelector(".c__turning em");
+        // 문제 번호 / 문제 내용
+        const cNumbers = Section.querySelector(".c__number span");
+        const cNumbere = Section.querySelector(".c__number em");
+        // 문제 내용을 text로 적고 / "정답 확인하기" 버튼으로 정답+오답 체크
+        const cQuestion = Section.querySelector(".c__question .c__text");
+        const cBtn = Section.querySelector(".c__question .btn");
+
+        const content = [
+            {
+                kind: "웹디자인기능사",
+                turning: "2011년 5회 기출",
+                number: 1,
+                answer: "프레젠테이션에서 화면 전체를 전환하는 단위를 의마하는 것은?",
+                get: "슬라이드"
+            }  
+        ];
+        
+        cTurnings.innerHTML = content[0].kind;
+        cTurninge.innerHTML = content[0].turning;
+        cNumbers.innerHTML = content[0].number;
+        cNumbere.innerHTML = content[0].answer;
+        // console.log(cTurnings)
+
+        
+        cBtn.addEventListener("click", function(){
+            if(cQuestion.value.trim() === content[0].get){
+                alert("오~");
+            }
+            else {
+                alert(";;");
+            }
+            console.log("asd")
+        });
+
+    </script>
+</body>
+</html>

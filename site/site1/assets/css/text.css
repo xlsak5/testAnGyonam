@@ -1,0 +1,121 @@
+/* text__wrap */
+#cardType {
+    padding: 120px 0;
+ }
+/* wrap보다 inner가 우선순위가 높아서 text-align:left 먹힘 */
+#cardType .text__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    text-align: left;
+}
+#cardType .notice__small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 40px;
+    margin: 0 auto;
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: rgba(208, 211, 55, 0.8);
+    color: #fff;
+    padding: 1px 23px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#cardType .text__inner .text {
+    width: 32.3333%;
+    border: 1px solid #f5f5f5;
+    padding: 90px 20px 20px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+#cardType .text__inner .text::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#cardType .text__inner .text.t1::before{
+    background-color: rgba(191, 194, 46, 0.3);
+    background-image: url(/assets/img/imgtext01.svg);
+}
+
+#cardType .text__inner .text.t2::before{
+    background-color: rgba(255, 51, 52, 0.2);
+    background-image: url(/assets/img/imgtext02.svg);
+}
+
+#cardType .text__inner .text.t3::before{
+    background-color: rgba(72, 87, 236, 0.2);
+    background-image: url(/assets/img/imgtext03.svg);
+}
+
+#cardType .text__inner .text.t4::before{
+    background-color: rgba(141, 255, 51, 0.2);
+    background-image: url(/assets/img/imgtext04.svg);
+}
+
+#cardType .text__inner .text.t5::before{
+    background-color: rgba(51, 255, 206, 0.2);
+    background-image: url(/assets/img/imgtext05..svg);
+}
+
+#cardType .text__inner .text.t6::before{
+    background-color: rgba(194, 46, 180, 0.3);
+    background-image: url(/assets/img/imgtext06.svg);
+}
+#cardType .text__inner .text:hover{
+    background-color: #f5f5f5;
+}
+#cardType .text__title {
+    font-size: 24px;
+    margin-bottom: 10px
+}
+#cardType .text__desc {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+#cardType .text__btn {
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+#cardType .text__btn::before {
+    content: "";
+    background-image: url(../asset/img/icon_plus.svg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    transition: all 0.3s;
+}
+#cardType .text__btn:hover::before{
+    background-color: red;
+    transform: rotate(360deg);
+}
+
+/* 미디어쿼리 */
+@media (max-width: 960px){
+    #cardType .text__inner .text{
+        width: 50%;
+    }
+}
+@media (max-width: 600px){
+    #cardType .text__inner .text{
+        width: 100%;
+    }
+}

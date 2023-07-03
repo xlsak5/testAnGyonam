@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP 블로그 만들기</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- SCRIPT -->
+    <script defer src="assets/js/common.js"></script>
+    
+</head>
+<body class="gray">
+    
+    <div id="skip">
+        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#main">컨텐츠 영역 바로가기</a>
+        <a href="#footer">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="header">
+        <div class="header__inner container">
+            <div class="left">
+                <a href="../index.html" class="star">
+                    <span class="blind">메인으로</span>
+                </a>
+            </div>
+            <h1 class="logo"><a href="../index.html">Developer Blog</a></h1>
+            <div class="right">
+                <ul>
+                    <li><a href="join.html">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="nav__inner">
+            <ul>
+                <li><a href="join.html">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">게시판</a></li>
+                <li><a href="#">블로그</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main" class="container">
+        <div class="blog__inner">
+            <div class="left">
+                <div class="blog__search">
+                    <h2>개발자 블로그 입니다.</h2>
+                    <p>개발과 관련된 글입니다.</p>
+                    <div>
+                        <form action="" name="#" method="POST">
+                            <legend class="blind">블로그 검색</legend>
+                            <input type="search" class="inputStyle2" name="searchKeyword" aria-label="검색" placeholder="검색어를 입력하세요!">
+                            <button type="submit" class="btnStyle3">검색하기</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="blog__wrap">
+                    <h2>All Posts</h2>
+                    <div class="cards__inner col3 line3">
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog01.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog06.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog02.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog03.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog04.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog05.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog05.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog05.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <figure class="card__img" >
+                                <source srcset="assets/img/blog01.png, assets/img/blog01@2x.png 2x, assets/img/blog01@3x.png 3x" />
+                                <img src="assets/img/blog05.png" alt="자연1">
+                            </figure>
+                            <div class="card__title">
+                                <h3>패럴렉스 사이트 기본 구조 스..</h3>
+                                <p>어떤 일이라도 노력하고 즐기면  그 결과는 빛을 바란다고 생각합니다. 신입의 열정과 도전정신을 깊숙히 새기며 배움에 있어 겸손함을 유지하며 세부적인 곳까지 파고드는 개발자가 되겠습니다.</p>
+                            </div>
+                            <div class="card__info">
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="blog__aside">
+                    <div class="intro">
+                        <picture class="img">
+                            <source srcset="assets/img/intro01.png, assets/img/intro01@2x.png 2x, assets/img/intro01@3x.png 3x" />
+                            <img src="assets/img/intro01.png" alt="소개이미지">
+                        </picture> 
+                        <p class="text">우리는 끊임없이 성장하고 발전하는 노력을 기울여야 한다.</p>
+                    </div>
+                    <div class="cate">
+                        <h4>카테고리</h4>
+                    </div>
+                    <div class="cate">
+                        <h4>인기 글</h4>
+                    </div>
+                    <div class="cate">
+                        <h4>최신 댓글</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 
+            <div class="intro__inner"></div>    각 페이지 소개 배너
+            <div class="join__inner"></div>     회원 가입 페이지
+            <div class="login__inner"></div>    로그인 페이지
+            <div class="board__inner"></div>    게시판 페이지
+            <div class="blog__inner"></div>     블로그 메인
+            
+
+            <div class="sliders__inner"></div>
+            <div class="banners__inner"></div>
+            <div class="cards__inner"></div>
+            <div class="images__inner"></div>
+            <div class="ads__inner"></div>
+            <div class="texts__inner"></div>
+            <div class="login__inner"></div>
+            <div class="join__inner"></div>
+            <div class="bolg__inner"></div>
+         -->
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <div class="footer__inner btStyle container mb100">
+            <div>Copyright @ 2023 AnGyonam</div>
+            <div>blog by webs</div>
+        </div>
+    </footer>
+    <!-- //footer -->
+</body>
+</html>

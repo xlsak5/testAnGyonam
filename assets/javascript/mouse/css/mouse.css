@@ -1,0 +1,124 @@
+body {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #fbff00; */
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+body.img01 {
+    background-image: url(../img/Frame\ 1-min.jpg);
+}
+body.img02 {
+    background-image: url(../img/mouseffect01-min.jpg);
+}
+body.img03 {
+    background-image: url(../img/mouseffect09-min.jpg);
+}
+body.img04 {
+    background-image: url(../img/mouseeffet03-min.jpg);
+}
+body.img05 {
+    background-image: url(../img/mouseeffet04-min.jpg);
+}
+body.img06 {
+    background-image: url(../img/mouseeffet05-min.jpg);
+}
+body.img07 {
+    background-image: url(../img/mouseeffet06-min.jpg);
+}
+body.img08 {
+    background-image: url(../img/mouseeffet07-min.jpg);
+}
+body.img09 {
+    background-image: url(../img/mouseeffet08-min.jpg);
+}
+body.img10 {
+    background-image: url(../img/mouseeffet10-min.jpg);
+}
+body::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(5, 36, 70, 0.87);
+    z-index: -1;
+}
+body.bg01::after {
+    background: rgba(187, 207, 111, 0.87);
+}
+body.bg02::after {
+    background: rgba(168, 128, 128, 0.87);
+}
+body.bg03::after {
+    background: rgba(97, 105, 138, 0.97);
+}
+body.bg04::after {
+    background: rgba(19, 53, 87, 0.87);
+}
+body.bg05::after {
+    background: rgba(23, 46, 70, 0.87);
+}
+body.bg06::after {
+    background: rgba(34, 55, 78, 0.87);
+}
+body.bg07::after {
+    background: rgba(38, 58, 80, 0.87);
+}
+body.bg08::after {
+    background: rgba(45, 64, 85, 0.87);
+}
+body.bg09::after {
+    background: rgba(43, 58, 73, 0.87);
+}
+body.bg10::after {
+    background: rgba(85, 126, 31, 0.87);
+}
+
+
+/* header */
+#header {
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#header h1 {
+    margin-bottom: 10px;
+}
+#header p {
+    margin-bottom: 10px;
+}
+#header a {
+    color: #fff;
+}
+#header li {
+    display: inline-block;
+}
+#header li a {
+    display: inline-block;
+    border: 1px solid #fff;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+}
+#header li.active a {
+    background-color: #fff;
+    color: #000;
+}
+
+/* footer */
+#footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+}
+#footer a {
+    color: #fff;
+}
+
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 새로나온 API로 월래 페이지에서 다른 페이지로 이동할때 애니메이션 효과를 줌 -->
+    <title>01. 슬라이드 이팩터</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../slider/css/reset.css">
+    <link rel="stylesheet" href="../slider/css/style.css">
+
+    <style>
+        /* slider__wrap */
+        .slider__wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider__img {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            /* overflow: hidden; */
+        }
+        .slider {
+            /* absolute가 before의 relative 역할을 해줌 */
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.3s;
+        }
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 5px 10px;
+        }
+        .slider:nth-child(1)::before {content: "이미지1"; }
+        .slider:nth-child(2)::before {content: "이미지2"; }
+        .slider:nth-child(3)::before {content: "이미지3"; }
+        .slider:nth-child(4)::before {content: "이미지4"; }
+        .slider:nth-child(5)::before {content: "이미지5"; }
+        .slider:nth-child(1) { z-index: 5;}
+        .slider:nth-child(2) { z-index: 4;}
+        .slider:nth-child(3) { z-index: 3;}
+        .slider:nth-child(4) { z-index: 2;}
+        .slider:nth-child(5) { z-index: 1;}
+    </style>
+</head>
+
+<body class="img01 bg01 font01">
+    <header id="header">
+        <h1>Javascript Slider Effect01</h1>
+        <p>슬라이드 이팩터</p>
+        <ul>
+            <li class="active"><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+            <li><a href="sliderEffect07.html">7</a></li>
+        </ul>
+    </header>
+     <!-- //header -->
+    <main id="main">
+        <div class="slider__wrap">
+            <div class="slider__img">
+                <div class="slider"><img src="./img/slider_bg07b.jpg" alt="이미지1"></div>
+                <div class="slider"><img src="./img/slider_bg08b.jpg" alt="이미지2"></div>
+                <div class="slider"><img src="./img/slider_bg03b.jpg" alt="이미지3"></div>
+                <div class="slider"><img src="./img/slider_bg04b.jpg" alt="이미지4"></div>
+                <div class="slider"><img src="./img/slider_bg06b.jpg" alt="이미지5"></div>
+            </div>
+        </div>
+    </main> 
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:skadldldl123@gmail.com">mailto:skadldldl123@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        // 선택자 
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img");
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        let currentIndex = 0;               //현재 보이는 이미지
+        let sliderCount = slider.length;    //이미지 갯수
+        let sliderInterval = 3000;          //이미지 간격 시간
+
+        // 특정 시간마다 실행되게 해줌
+        // setInterval(() => {
+        //     // 1 % 5 = 1 / 2 % 5 = 2 / 3 % 5 = 3 / 4 % 5 = 4 / 5 % 5 = 0
+        //     let nextIndex = (currentIndex + 1) % sliderCount;
+
+        //     slider[currentIndex].style.opacity = "0";
+        //     slider[nextIndex].style.opacity = "1"; 
+
+        //     currentIndex = nextIndex;
+            
+        //     console.log(currentIndex);
+
+        //     // 첫번째 이미지를 안보이게 해주고
+        //     // 두번째 이미지를 보이게 작업
+        //     // slider[0].style.opacity = "0";  //첫번째 이미지 안보이게
+        //     // slider[1].style.opacity = "1";  //두번쨰 이미지를 보이게
+            
+        //     // slider[1].style.opacity = "0";  //두번 째 이미지를 안보이게
+        //     // slider[2].style.opacity = "1";  //세번쨰 이미지를 보이게
+
+        //     // slider[2].style.opacity = "0";  //세번째 이미지 안보이게
+        //     // slider[3].style.opacity = "1";  //네번쨰 이미지를 보이게
+
+        //     // slider[3].style.opacity = "0";  //네번째 이미지 안보이게
+        //     // slider[4].style.opacity = "1";  //다섯번쨰 이미지를 보이게
+
+        //     // slider[4].style.opacity = "0";  //다섯번째 이미지 안보이게
+        //     // slider[0].style.opacity = "1";  //첫번쨰 이미지를 보이게
+        // }, sliderInterval);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // gsap
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % sliderCount;
+
+            slider[currentIndex].style.opacity = "0";
+            slider[nextIndex].style.opacity = "1"; 
+
+            
+            gsap.to(slider[currentIndex], {
+                opacity: "0"
+            });
+            gsap.to(slider[nextIndex], {
+                opacity: "1"
+            });
+            currentIndex = nextIndex;
+        }, 3000);
+    </script>
+
+    <script>
+        // jquery
+    </script>
+</body>
+</html>
