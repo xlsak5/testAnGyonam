@@ -1,6 +1,3 @@
-# web2023
-나의 블로그 : https://skadldldl123.tistory.com/
-
 # JAVASCRIPT      
 데이터 저장하기 : https://xlsak5.github.io/testAnGyonam/assets/javascript/javascript01.html      
 데이터 출력하기 : https://xlsak5.github.io/testAnGyonam/assets/javascript/javascript02.html      
